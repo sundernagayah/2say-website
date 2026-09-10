@@ -1,0 +1,37 @@
+/* Hero image override — 2Say dancers */
+.hero {
+  background: #070707;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.48) 30%, rgba(0,0,0,.12) 58%, rgba(0,0,0,.28) 100%),
+    url('assets/hero-dancers.webp') center center / cover no-repeat;
+  mix-blend-mode: normal;
+  opacity: 1;
+  filter: none;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.16), transparent 22%, transparent 74%, #0a0a09 100%);
+}
+
+@media (max-width: 980px) {
+  .hero::after {
+    background-position: 56% center;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero::after {
+    inset: 0;
+    background-position: 56% center;
+    background-size: cover;
+    opacity: 1;
+  }
+}
