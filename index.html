@@ -32,8 +32,9 @@
         <p class="eyebrow">A film production company</p>
         <h1><span>2Say</span> Stories<br/>Worth Saying.</h1>
         <p class="hero-sub">Films. People. Ideas.<br/>Singapore.</p>
-        <!-- Replace href="#work" with your showreel URL later -->
-        <a class="outline-btn" href="#work"><span class="play">▶</span> Watch Showreel</a>
+        <button class="outline-btn showreel-trigger" id="showreel-open" type="button" aria-haspopup="dialog" aria-controls="showreel-modal">
+          <span class="play">▶</span> Watch Showreel
+        </button>
       </div>
 
       <div class="hero-categories" aria-label="Work categories">
@@ -139,6 +140,20 @@
       <span class="line"></span>
     </div>
   </footer>
+
+  <div class="showreel-modal" id="showreel-modal" role="dialog" aria-modal="true" aria-label="2Say Films showreel" aria-hidden="true">
+    <button class="showreel-close" id="showreel-close" type="button" aria-label="Close showreel">×</button>
+    <div class="showreel-frame" role="document">
+      <iframe
+        id="showreel-player"
+        title="2Say Films Showreel"
+        src=""
+        data-src="https://player.vimeo.com/video/1230826232?autoplay=1&title=0&byline=0&portrait=0&dnt=1"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
