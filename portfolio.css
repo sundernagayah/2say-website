@@ -147,10 +147,10 @@ body{
 .is-coming .category-meta{opacity:.62;}
 .is-coming{cursor:default;}
 
-.feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp");}
-.short-media{background-image:url("https://media.2sayfilms.com/short-01.webp");}
-.music-media{background-image:url("https://media.2sayfilms.com/music-01.webp");}
-.corp-media{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
+.feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-media{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-media{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-media{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
 .visual-interlude{
   position:relative;
@@ -166,7 +166,7 @@ body{
   inset:-14%;
   background:
     linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08) 45%,rgba(0,0,0,.5)),
-    url("https://media.2sayfilms.com/feature-coming.webp") center / cover no-repeat;
+    url("https://media.2sayfilms.com/feature-coming.webp") center / cover no-repeat,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover no-repeat;
   filter:contrast(1.08) brightness(.72);
   transform:scale(1.03);
 }
@@ -199,14 +199,14 @@ body{
 .about-image{
   background:
     linear-gradient(90deg,transparent 55%,rgba(0,0,0,.7)),
-    url("https://media.2sayfilms.com/short-06.webp") center / cover;
+    url("https://media.2sayfilms.com/short-06.webp") center / cover,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
   filter:saturate(.78) contrast(1.05) brightness(.72);
 }
 
 .contact-banner{
   background:
     linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),
-    url("https://media.2sayfilms.com/corp-01.webp") center / cover;
+    url("https://media.2sayfilms.com/corp-01.webp") center / cover,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
 }
 
 /* Portfolio pages */
@@ -282,9 +282,9 @@ body{
   pointer-events:none;
 }
 
-.portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp");}
-.portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp");}
-.portfolio-lead.corporate{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
+.portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.portfolio-lead.corporate{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
 .portfolio-rule{
   margin:0 4vw;
@@ -347,24 +347,24 @@ body{
   text-transform:uppercase;
 }
 
-.short-01{background-image:url("https://media.2sayfilms.com/short-01.webp");}
-.short-02{background-image:url("https://media.2sayfilms.com/short-02.webp");}
-.short-03{background-image:url("https://media.2sayfilms.com/short-03.webp");}
-.short-04{background-image:url("https://media.2sayfilms.com/short-04.webp");}
-.short-05{background-image:url("https://media.2sayfilms.com/short-05.webp");}
-.short-06{background-image:url("https://media.2sayfilms.com/short-06.webp");}
+.short-01{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-02{background-image:url("https://media.2sayfilms.com/short-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-03{background-image:url("https://media.2sayfilms.com/short-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-04{background-image:url("https://media.2sayfilms.com/short-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-05{background-image:url("https://media.2sayfilms.com/short-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-06{background-image:url("https://media.2sayfilms.com/short-06.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
-.music-01{background-image:url("https://media.2sayfilms.com/music-01.webp");}
-.music-02{background-image:url("https://media.2sayfilms.com/music-02.webp");}
-.music-03{background-image:url("https://media.2sayfilms.com/music-03.webp");}
-.music-04{background-image:url("https://media.2sayfilms.com/music-04.webp");}
-.music-05{background-image:url("https://media.2sayfilms.com/music-05.webp");}
+.music-01{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-02{background-image:url("https://media.2sayfilms.com/music-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-03{background-image:url("https://media.2sayfilms.com/music-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-04{background-image:url("https://media.2sayfilms.com/music-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-05{background-image:url("https://media.2sayfilms.com/music-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
-.corp-01{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
-.corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp");}
-.corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
-.corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp");}
-.corp-05{background-image:url("https://media.2sayfilms.com/corp-05.webp");}
+.corp-01{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-05{background-image:url("https://media.2sayfilms.com/corp-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
 .portfolio-break{
   margin:0 4vw 9rem;
