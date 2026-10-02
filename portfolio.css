@@ -1,0 +1,462 @@
+:root{
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Manrope", Arial, sans-serif;
+  --paper:#f0e9df;
+  --ink:#080806;
+  --muted-v2:#aaa39a;
+  --hairline:rgba(255,255,255,.14);
+  --media-base:"https://media.2sayfilms.com/";
+}
+
+body{
+  background:#080806;
+  font-family:var(--sans);
+  letter-spacing:-.01em;
+}
+
+.brand,
+.hero h1,
+.section h2,
+.about-copy h2,
+.contact-banner h2,
+.portfolio-title,
+.project-title,
+.category-title,
+.next-title{
+  font-family:var(--serif);
+  font-weight:400;
+}
+
+.hero h1{
+  text-transform:none;
+  font-size:clamp(4rem,7.5vw,8.2rem);
+  line-height:.82;
+  letter-spacing:-.045em;
+  max-width:9ch;
+}
+
+.hero-sub{font-size:.78rem;letter-spacing:.02em;}
+.eyebrow{font-size:.58rem;letter-spacing:.32em;}
+.main-nav{font-size:.61rem;}
+.header-tagline{font-size:.56rem;}
+
+.work-index{
+  padding-top:7rem;
+  padding-bottom:7rem;
+}
+
+.work-index .section-heading-row{
+  margin-bottom:3.2rem;
+  align-items:flex-end;
+}
+
+.work-index .section-heading-row h2{
+  max-width:9ch;
+  font-size:clamp(3.5rem,6vw,6.8rem);
+  line-height:.86;
+}
+
+.work-index-intro{
+  max-width:460px;
+  color:#bdb6ad;
+  line-height:1.6;
+  font-size:.82rem;
+}
+
+.work-index-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1rem;
+}
+
+.work-category{
+  position:relative;
+  overflow:hidden;
+  min-height:420px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#111;
+  isolation:isolate;
+}
+
+.work-category:nth-child(1){grid-column:span 7;}
+.work-category:nth-child(2){grid-column:span 5;}
+.work-category:nth-child(3){grid-column:span 5;}
+.work-category:nth-child(4){grid-column:span 7;}
+
+.work-category-media{
+  position:absolute;
+  inset:0;
+  background-position:center;
+  background-size:cover;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease;
+  filter:saturate(.86) contrast(1.03) brightness(.78);
+  z-index:-2;
+}
+
+.work-category::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.12) 52%,rgba(0,0,0,.12) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.18),transparent 55%);
+  z-index:-1;
+}
+
+.work-category:not(.is-coming):hover .work-category-media{
+  transform:scale(1.035);
+  filter:saturate(.95) contrast(1.05) brightness(.9);
+}
+
+.work-category-content{
+  position:absolute;
+  left:2rem;
+  right:2rem;
+  bottom:1.8rem;
+  display:flex;
+  justify-content:space-between;
+  gap:1.5rem;
+  align-items:flex-end;
+}
+
+.work-category-number{
+  position:absolute;
+  top:1.4rem;
+  left:1.6rem;
+  font-size:.55rem;
+  letter-spacing:.24em;
+  opacity:.72;
+}
+
+.category-title{
+  margin:0;
+  font-size:clamp(2.5rem,4.2vw,5rem);
+  line-height:.88;
+  letter-spacing:-.035em;
+}
+
+.category-meta{
+  text-align:right;
+  font-size:.58rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#d7d0c7;
+  white-space:nowrap;
+}
+
+.is-coming .category-meta{opacity:.62;}
+.is-coming{cursor:default;}
+
+.feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp");}
+.short-media{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.music-media{background-image:url("https://media.2sayfilms.com/music-01.webp");}
+.corp-media{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
+
+.visual-interlude{
+  position:relative;
+  height:min(42vw,560px);
+  overflow:hidden;
+  border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);
+  background:#050505;
+}
+
+.visual-interlude-image{
+  position:absolute;
+  inset:-14%;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08) 45%,rgba(0,0,0,.5)),
+    url("https://media.2sayfilms.com/feature-coming.webp") center / cover no-repeat;
+  filter:contrast(1.08) brightness(.72);
+  transform:scale(1.03);
+}
+
+.visual-interlude-copy{
+  position:absolute;
+  left:5vw;
+  bottom:3.2rem;
+  max-width:800px;
+}
+
+.visual-interlude-copy span{
+  display:block;
+  font-size:.58rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:.8rem;
+  color:#c7bfb5;
+}
+
+.visual-interlude-copy strong{
+  display:block;
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(3rem,6vw,7rem);
+  line-height:.86;
+  letter-spacing:-.04em;
+}
+
+.about-image{
+  background:
+    linear-gradient(90deg,transparent 55%,rgba(0,0,0,.7)),
+    url("https://media.2sayfilms.com/short-06.webp") center / cover;
+  filter:saturate(.78) contrast(1.05) brightness(.72);
+}
+
+.contact-banner{
+  background:
+    linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),
+    url("https://media.2sayfilms.com/corp-01.webp") center / cover;
+}
+
+/* Portfolio pages */
+.portfolio-page{
+  background:#080806;
+}
+
+.portfolio-page .site-header{
+  background:linear-gradient(to bottom,rgba(6,6,5,.96),rgba(6,6,5,.45),transparent);
+}
+
+.portfolio-main{overflow:hidden;}
+
+.portfolio-hero{
+  min-height:100vh;
+  padding:10.5rem 4vw 5rem;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:auto auto 1fr;
+  gap:1rem;
+  position:relative;
+}
+
+.portfolio-kicker{
+  grid-column:1 / 5;
+  align-self:end;
+  font-size:.58rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#c1bab1;
+  margin:0 0 1.4rem;
+}
+
+.portfolio-title{
+  grid-column:1 / 10;
+  z-index:3;
+  margin:0;
+  font-size:clamp(5rem,12vw,12rem);
+  line-height:.74;
+  letter-spacing:-.055em;
+  text-transform:none;
+}
+
+.portfolio-deck{
+  grid-column:1 / 4;
+  grid-row:3;
+  align-self:end;
+  max-width:360px;
+  margin:0 0 1.5rem;
+  color:#b9b2a9;
+  font-size:.78rem;
+  line-height:1.7;
+}
+
+.portfolio-lead{
+  grid-column:4 / 13;
+  grid-row:2 / 4;
+  align-self:end;
+  aspect-ratio:16 / 9;
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  overflow:hidden;
+  margin-top:-1.4rem;
+}
+
+.portfolio-lead::after,
+.project-still::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.28),transparent 55%);
+  pointer-events:none;
+}
+
+.portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp");}
+.portfolio-lead.corporate{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
+
+.portfolio-rule{
+  margin:0 4vw;
+  border:0;
+  border-top:1px solid var(--hairline);
+}
+
+.portfolio-list{
+  padding:7rem 4vw 3rem;
+}
+
+.portfolio-project{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1rem;
+  align-items:end;
+  margin-bottom:9rem;
+}
+
+.portfolio-project:nth-child(odd) .project-still{grid-column:1 / 10;}
+.portfolio-project:nth-child(odd) .project-copy{grid-column:10 / 13;}
+.portfolio-project:nth-child(even) .project-copy{grid-column:1 / 4;grid-row:1;}
+.portfolio-project:nth-child(even) .project-still{grid-column:4 / 13;grid-row:1;}
+
+.project-still{
+  aspect-ratio:16 / 9;
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.16);
+}
+
+.project-copy{
+  padding:0 .5rem .2rem;
+}
+
+.project-index{
+  display:block;
+  font-size:.52rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#8f8880;
+  margin-bottom:.8rem;
+}
+
+.project-title{
+  margin:0 0 .7rem;
+  font-size:clamp(2.2rem,3.5vw,4.2rem);
+  line-height:.88;
+  letter-spacing:-.03em;
+}
+
+.project-type{
+  margin:0;
+  color:#aaa39a;
+  font-size:.66rem;
+  line-height:1.6;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.short-01{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.short-02{background-image:url("https://media.2sayfilms.com/short-02.webp");}
+.short-03{background-image:url("https://media.2sayfilms.com/short-03.webp");}
+.short-04{background-image:url("https://media.2sayfilms.com/short-04.webp");}
+.short-05{background-image:url("https://media.2sayfilms.com/short-05.webp");}
+.short-06{background-image:url("https://media.2sayfilms.com/short-06.webp");}
+
+.music-01{background-image:url("https://media.2sayfilms.com/music-01.webp");}
+.music-02{background-image:url("https://media.2sayfilms.com/music-02.webp");}
+.music-03{background-image:url("https://media.2sayfilms.com/music-03.webp");}
+.music-04{background-image:url("https://media.2sayfilms.com/music-04.webp");}
+.music-05{background-image:url("https://media.2sayfilms.com/music-05.webp");}
+
+.corp-01{background-image:url("https://media.2sayfilms.com/corp-01.webp");}
+.corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp");}
+.corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
+.corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp");}
+.corp-05{background-image:url("https://media.2sayfilms.com/corp-05.webp");}
+
+.portfolio-break{
+  margin:0 4vw 9rem;
+  padding:3rem 0 0;
+  border-top:1px solid var(--hairline);
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+}
+
+.portfolio-break p{
+  grid-column:5 / 12;
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(2.7rem,5vw,6rem);
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+
+.next-work{
+  margin-top:4rem;
+  padding:5rem 4vw 6rem;
+  border-top:1px solid var(--hairline);
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:2rem;
+}
+
+.next-work small{
+  display:block;
+  font-size:.55rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#aaa39a;
+  margin-bottom:.7rem;
+}
+
+.next-title{
+  display:block;
+  font-size:clamp(3rem,6vw,7rem);
+  line-height:.82;
+  letter-spacing:-.04em;
+}
+
+.next-arrow{
+  font-size:2rem;
+  opacity:.6;
+  transition:transform .25s ease,opacity .25s ease;
+}
+
+.next-work:hover .next-arrow{transform:translateX(.5rem);opacity:1;}
+
+@media(max-width:980px){
+  .work-category:nth-child(n){grid-column:span 6;}
+  .portfolio-title{grid-column:1 / 13;}
+  .portfolio-lead{grid-column:3 / 13;}
+  .portfolio-deck{grid-column:1 / 5;}
+}
+
+@media(max-width:720px){
+  .hero h1{font-size:clamp(3.6rem,16vw,5.6rem);line-height:.82;}
+  .work-index{padding:4.5rem 1.2rem;}
+  .work-index .section-heading-row{margin-bottom:2.2rem;}
+  .work-index-grid{grid-template-columns:1fr;gap:.8rem;}
+  .work-category:nth-child(n){grid-column:auto;min-height:340px;}
+  .work-category-content{left:1.2rem;right:1.2rem;bottom:1.15rem;}
+  .category-title{font-size:3.1rem;}
+  .category-meta{font-size:.5rem;}
+  .visual-interlude{height:60vh;min-height:430px;}
+  .visual-interlude-copy{left:1.25rem;right:1.25rem;bottom:2rem;}
+  .portfolio-hero{
+    min-height:auto;
+    padding:8rem 1.2rem 3rem;
+    display:block;
+  }
+  .portfolio-kicker{margin-bottom:1rem;}
+  .portfolio-title{font-size:clamp(4.5rem,21vw,7.2rem);margin-bottom:2rem;}
+  .portfolio-deck{max-width:100%;margin-bottom:2rem;}
+  .portfolio-lead{margin:0;aspect-ratio:4 / 3;}
+  .portfolio-rule{margin:0 1.2rem;}
+  .portfolio-list{padding:4rem 1.2rem 1rem;}
+  .portfolio-project{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    margin-bottom:5rem;
+    gap:1.3rem;
+  }
+  .portfolio-project:nth-child(even) .project-copy{order:2;}
+  .project-copy{padding:0;}
+  .project-title{font-size:3rem;}
+  .portfolio-break{margin:0 1.2rem 6rem;display:block;}
+  .portfolio-break p{font-size:3.1rem;}
+  .next-work{padding:3.5rem 1.2rem 4.5rem;}
+}
