@@ -19,39 +19,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// YouTube hero background: no playlist UI; manually restart the single video when it ends.
-window.onYouTubeIframeAPIReady = function () {
-  const playerHost = document.querySelector('#hero-bg-player');
-  if (!playerHost || !window.YT?.Player) return;
-
-  new YT.Player('hero-bg-player', {
-    videoId: 'A1cIZjlE1J0',
-    playerVars: {
-      autoplay: 1,
-      mute: 1,
-      controls: 0,
-      playsinline: 1,
-      rel: 0,
-      iv_load_policy: 3,
-      disablekb: 1,
-      fs: 0,
-      origin: 'https://2sayfilms.com'
-    },
-    events: {
-      onReady: (event) => {
-        event.target.mute();
-        event.target.playVideo();
-      },
-      onStateChange: (event) => {
-        if (event.data === YT.PlayerState.ENDED) {
-          event.target.seekTo(0);
-          event.target.playVideo();
-        }
-      }
-    }
-  });
-};
-
 const showreelOpen = document.querySelector('#showreel-open');
 const showreelModal = document.querySelector('#showreel-modal');
 const showreelClose = document.querySelector('#showreel-close');
