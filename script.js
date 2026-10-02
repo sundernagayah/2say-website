@@ -56,3 +56,31 @@ document.addEventListener('keydown', (event) => {
     closeShowreel();
   }
 });
+
+
+// Subtle reveal motion: preserves a static layout when JS is unavailable.
+document.documentElement.classList.add('motion-ready');
+
+const revealTargets = document.querySelectorAll(
+  '.work-category, .visual-interlude, .about-split, .services-section, .contact-banner, .portfolio-project, .portfolio-break, .next-work'
+);
+
+revealTargets.forEach((el) => el.classList.add('reveal-item'));
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -6% 0px'
+  });
+
+  revealTargets.forEach((el) => revealObserver.observe(el));
+} else {
+  revealTargets.forEach((el) => el.classList.add('is-visible'));
+}
