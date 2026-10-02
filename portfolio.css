@@ -166,7 +166,8 @@ body{
   inset:-14%;
   background:
     linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08) 45%,rgba(0,0,0,.5)),
-    url("https://media.2sayfilms.com/feature-coming.webp") center / cover no-repeat,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover no-repeat;
+    url("https://media.2sayfilms.com/feature-coming.webp") center / cover no-repeat,
+    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover no-repeat;
   filter:contrast(1.08) brightness(.72);
   transform:scale(1.03);
 }
@@ -199,14 +200,16 @@ body{
 .about-image{
   background:
     linear-gradient(90deg,transparent 55%,rgba(0,0,0,.7)),
-    url("https://media.2sayfilms.com/short-06.webp") center / cover,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
+    url("https://media.2sayfilms.com/short-06.webp") center / cover,
+    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
   filter:saturate(.78) contrast(1.05) brightness(.72);
 }
 
 .contact-banner{
   background:
     linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),
-    url("https://media.2sayfilms.com/corp-01.webp") center / cover,\n    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
+    url("https://media.2sayfilms.com/corp-01.webp") center / cover,
+    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
 }
 
 /* Portfolio pages */
