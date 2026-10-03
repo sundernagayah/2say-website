@@ -150,7 +150,7 @@ body{
 .feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .short-media{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .music-media{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-media{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-media{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
 .visual-interlude{
   position:relative;
@@ -208,7 +208,7 @@ body{
 .contact-banner{
   background:
     linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),
-    url("https://media.2sayfilms.com/corp-01.webp") center / cover,
+    url("https://media.2sayfilms.com/corp-03.webp") center / cover,
     url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
 }
 
@@ -287,7 +287,7 @@ body{
 
 .portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.portfolio-lead.corporate{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.portfolio-lead.corporate{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
 .portfolio-rule{
   margin:0 4vw;
@@ -363,7 +363,7 @@ body{
 .music-04{background-image:url("https://media.2sayfilms.com/music-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .music-05{background-image:url("https://media.2sayfilms.com/music-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
-.corp-01{background-image:url("https://media.2sayfilms.com/corp-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-01{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
