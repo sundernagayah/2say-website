@@ -1096,3 +1096,34 @@ body::before{
     transition:none;
   }
 }
+
+
+/* Temporary corporate placeholders — replace when final stills are ready. */
+.corp-placeholder-01{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.025),transparent 34%),
+    radial-gradient(circle at 72% 30%,rgba(166,118,72,.28),transparent 26rem),
+    radial-gradient(circle at 24% 72%,rgba(69,81,73,.18),transparent 24rem),
+    linear-gradient(120deg,#17110c 0%,#0d0b09 52%,#20150e 100%);
+}
+
+.corp-placeholder-02{
+  background:
+    linear-gradient(18deg,rgba(255,255,255,.018),transparent 42%),
+    radial-gradient(ellipse at 25% 36%,rgba(132,92,56,.26),transparent 22rem),
+    radial-gradient(ellipse at 82% 72%,rgba(82,68,52,.20),transparent 26rem),
+    linear-gradient(145deg,#0d0c0a 0%,#18120d 46%,#090807 100%);
+}
+
+.corp-placeholder-01::before,
+.corp-placeholder-02::before{
+  content:"2SAY / CORPORATE";
+  position:absolute;
+  left:1.5rem;
+  bottom:1.3rem;
+  z-index:2;
+  color:rgba(238,229,217,.45);
+  font-size:.52rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
