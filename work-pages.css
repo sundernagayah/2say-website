@@ -811,3 +811,14 @@ body.project-video-open{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
+
+.work-detail-page .music-boogieverse-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/BOOGIEVERSE%20THUMBNAIL.png"),
+    url("https://media.2sayfilms.com/music-05.webp");
+  background-position:center;
+  background-size:104% auto,cover;
+  background-repeat:no-repeat;
+}
