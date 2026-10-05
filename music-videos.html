@@ -50,13 +50,23 @@
 
           <article class="work-card">
             <div class="work-card-top">01</div>
-            <a class="work-card-image music-nee-vendume" href="https://youtu.be/nWTO-C2QkF0?si=wD30sH_TDh1lglik" target="_blank" rel="noopener noreferrer" aria-label="Watch Nee Vendume on YouTube"></a>
+            <button
+              class="work-card-image music-nee-vendume video-modal-trigger"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/nWTO-C2QkF0?autoplay=1&rel=0&playsinline=1"
+              aria-label="Play Nee Vendume">
+            </button>
             <div class="work-card-body">
               <h2>Nee Vendume</h2>
               <div class="work-card-meta">Music Video<br>Suthasini</div>
               <p>A Music Video for Suthasini produced by Dev Studio Productionz.<br>Cinematography by 2Say Films.</p>
               <div>
-                <a class="work-card-link" href="https://youtu.be/nWTO-C2QkF0?si=wD30sH_TDh1lglik" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                <button
+                  class="work-card-link work-card-link-button video-modal-trigger"
+                  type="button"
+                  data-video-src="https://www.youtube.com/embed/nWTO-C2QkF0?autoplay=1&rel=0&playsinline=1">
+                  Watch Video
+                </button>
                 <span class="work-card-link-line"></span>
               </div>
             </div>
@@ -129,6 +139,19 @@
       <a class="work-cta-action" href="index.html#contact">Start a conversation <span>→</span></a>
     </section>
   </main>
+
+  <div class="project-video-modal" id="project-video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="project-video-close" id="project-video-close" type="button" aria-label="Close video">×</button>
+    <div class="project-video-frame">
+      <iframe
+        id="project-video-player"
+        src=""
+        title="2Say Films video"
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="brand footer-brand">2SAY</div>
