@@ -84,3 +84,50 @@ if ('IntersectionObserver' in window) {
 } else {
   revealTargets.forEach((el) => el.classList.add('is-visible'));
 }
+
+
+// Project video modal — used by portfolio thumbnails.
+const projectVideoModal = document.querySelector('#project-video-modal');
+const projectVideoPlayer = document.querySelector('#project-video-player');
+const projectVideoClose = document.querySelector('#project-video-close');
+const projectVideoTriggers = document.querySelectorAll('.video-modal-trigger');
+let lastProjectVideoTrigger = null;
+
+function openProjectVideo(trigger) {
+  if (!projectVideoModal || !projectVideoPlayer) return;
+  const src = trigger?.dataset?.videoSrc;
+  if (!src) return;
+
+  lastProjectVideoTrigger = trigger;
+  projectVideoPlayer.src = src;
+  projectVideoModal.classList.add('is-open');
+  projectVideoModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('project-video-open');
+  projectVideoClose?.focus();
+}
+
+function closeProjectVideo() {
+  if (!projectVideoModal || !projectVideoPlayer) return;
+
+  projectVideoModal.classList.remove('is-open');
+  projectVideoModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('project-video-open');
+  projectVideoPlayer.src = '';
+  lastProjectVideoTrigger?.focus();
+}
+
+projectVideoTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => openProjectVideo(trigger));
+});
+
+projectVideoClose?.addEventListener('click', closeProjectVideo);
+
+projectVideoModal?.addEventListener('click', (event) => {
+  if (event.target === projectVideoModal) closeProjectVideo();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && projectVideoModal?.classList.contains('is-open')) {
+    closeProjectVideo();
+  }
+});
