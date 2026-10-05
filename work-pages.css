@@ -777,3 +777,23 @@ body.project-video-open{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
+
+/* Brighter Music Videos hero — preserve text legibility without burying the artwork. */
+.music-page .work-hero::before{
+  filter:saturate(.98) contrast(1.01) brightness(1.08);
+}
+
+.music-page .work-hero::after{
+  background:
+    radial-gradient(circle at 77% 45%,rgba(212,143,73,.08),transparent 28rem),
+    linear-gradient(90deg,
+      rgba(5,4,3,.72) 0%,
+      rgba(5,4,3,.56) 24%,
+      rgba(6,4,3,.18) 52%,
+      rgba(4,3,2,.14) 100%),
+    linear-gradient(to top,
+      rgba(7,5,3,.50) 0%,
+      transparent 40%,
+      rgba(5,4,3,.10) 100%);
+}
