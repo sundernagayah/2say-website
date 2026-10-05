@@ -760,3 +760,17 @@ body.project-video-open{
     filter .45s ease,
     box-shadow .45s ease;
 }
+
+
+.work-detail-page .music-kaviye-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.png"),
+    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.jpg"),
+    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.jpeg"),
+    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.webp"),
+    url("https://media.2sayfilms.com/music-03.webp");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
