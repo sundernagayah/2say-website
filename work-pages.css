@@ -744,3 +744,30 @@ body.project-video-open{
   font-weight:500;
   color:#c6b7a6;
 }
+
+
+/* Give Nee Vendume more editorial space so its credits stay comfortably on one line. */
+.music-page .work-card:nth-child(1){
+  grid-column:span 6;
+}
+
+.music-page .work-card:nth-child(2),
+.music-page .work-card:nth-child(3){
+  grid-column:span 3;
+}
+
+@media(max-width:980px){
+  .music-page .work-card:nth-child(1),
+  .music-page .work-card:nth-child(2),
+  .music-page .work-card:nth-child(3){
+    grid-column:span 6;
+  }
+}
+
+@media(max-width:720px){
+  .music-page .work-card:nth-child(1),
+  .music-page .work-card:nth-child(2),
+  .music-page .work-card:nth-child(3){
+    grid-column:auto;
+  }
+}
