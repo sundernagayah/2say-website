@@ -52,8 +52,11 @@
 }
 
 .music-page .work-hero::before{
-  background-image:url("https://media.2sayfilms.com/music-01.webp"),url("vlcsnap-2026-09-10-22h52m08s626.png");
-  background-position:center 42%;
+  background-image:
+    url("https://media.2sayfilms.com/Music%20Video%20Thumbnail.png"),
+    url("https://media.2sayfilms.com/music-01.webp"),
+    url("vlcsnap-2026-09-10-22h52m08s626.png");
+  background-position:center;
 }
 
 .corporate-page .work-hero::before{
