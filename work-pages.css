@@ -850,3 +850,17 @@ body.project-video-open{
   background-size:108% auto,108% auto,108% auto,108% auto,cover;
   background-repeat:no-repeat;
 }
+
+
+.work-detail-page .narrative-kk-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/KK%20ASSET.png"),
+    url("https://media.2sayfilms.com/KK%20ASSET.jpg"),
+    url("https://media.2sayfilms.com/KK%20ASSET.jpeg"),
+    url("https://media.2sayfilms.com/KK%20ASSET.webp"),
+    url("https://media.2sayfilms.com/short-03.webp");
+  background-position:center;
+  background-size:112% auto,112% auto,112% auto,112% auto,cover;
+  background-repeat:no-repeat;
+}
