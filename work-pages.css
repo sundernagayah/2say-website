@@ -633,3 +633,8 @@ body.project-video-open{
   .project-video-frame{width:96vw;max-height:80vh;}
   .project-video-close{top:.8rem;right:1rem;}
 }
+
+
+.keep-together{
+  white-space:nowrap;
+}
