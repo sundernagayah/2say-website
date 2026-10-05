@@ -1,3 +1,35 @@
+// Keep homepage hero video running on mobile browsers.
+const homepageHeroVideo = document.querySelector('.hero-video video');
+
+function startHomepageHeroVideo() {
+  if (!homepageHeroVideo) return;
+  homepageHeroVideo.muted = true;
+  homepageHeroVideo.defaultMuted = true;
+  homepageHeroVideo.playsInline = true;
+
+  const playAttempt = homepageHeroVideo.play();
+  if (playAttempt && typeof playAttempt.catch === 'function') {
+    playAttempt.catch(() => {});
+  }
+}
+
+if (homepageHeroVideo) {
+  if (homepageHeroVideo.readyState >= 2) {
+    startHomepageHeroVideo();
+  } else {
+    homepageHeroVideo.addEventListener('canplay', startHomepageHeroVideo, { once: true });
+    homepageHeroVideo.addEventListener('loadeddata', startHomepageHeroVideo, { once: true });
+  }
+
+  // iOS can suspend inline video after tab/app state changes.
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) startHomepageHeroVideo();
+  });
+
+  // If autoplay was deferred, the first touch resumes it without navigating anywhere.
+  document.addEventListener('touchstart', startHomepageHeroVideo, { once: true, passive: true });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const id = this.getAttribute('href');
