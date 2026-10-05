@@ -836,3 +836,17 @@ body.project-video-open{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
+
+.work-detail-page .narrative-ymk-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/YMK%20ASSET.png"),
+    url("https://media.2sayfilms.com/YMK%20ASSET.jpg"),
+    url("https://media.2sayfilms.com/YMK%20ASSET.jpeg"),
+    url("https://media.2sayfilms.com/YMK%20ASSET.webp"),
+    url("https://media.2sayfilms.com/short-02.webp");
+  background-position:center;
+  background-size:108% auto,108% auto,108% auto,108% auto,cover;
+  background-repeat:no-repeat;
+}
