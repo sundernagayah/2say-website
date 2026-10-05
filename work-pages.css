@@ -530,3 +530,15 @@
     justify-self:start;
   }
 }
+
+
+.work-detail-page .music-nee-vendume{
+  display:block;
+  background-image:
+    url("https://img.youtube.com/vi/nWTO-C2QkF0/maxresdefault.jpg"),
+    url("https://img.youtube.com/vi/nWTO-C2QkF0/hqdefault.jpg");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  cursor:pointer;
+}
