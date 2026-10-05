@@ -1,0 +1,532 @@
+/* 2Say selected-work pages — cinematic editorial redesign
+   Scoped to .work-detail-page so the homepage remains untouched. */
+
+.work-detail-page{
+  --page-bg:#090806;
+  --page-bg-2:#100b07;
+  --page-paper:#f2ebe2;
+  --page-muted:#b9aea1;
+  --page-line:rgba(238,221,198,.16);
+  --page-accent:#b9824c;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(154,91,43,.12),transparent 34rem),
+    linear-gradient(180deg,#090806,#0b0907 45%,#080706);
+}
+
+.work-detail-page .site-header{
+  background:linear-gradient(to bottom,rgba(7,6,5,.92),rgba(7,6,5,.58),rgba(7,6,5,.08));
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+
+.work-detail-page .portfolio-main{
+  overflow:visible;
+}
+
+.work-detail-page .work-hero{
+  position:relative;
+  min-height:760px;
+  height:88vh;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  align-items:end;
+  gap:1rem;
+  padding:9rem 4.6vw 4.5rem;
+  isolation:isolate;
+  overflow:hidden;
+  border-bottom:1px solid var(--page-line);
+}
+
+.work-detail-page .work-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  background-position:center;
+  background-size:cover;
+  transform:scale(1.025);
+}
+
+.short-page .work-hero::before{
+  background-image:url("https://media.2sayfilms.com/short-01.webp"),url("vlcsnap-2026-09-10-22h52m08s626.png");
+  background-position:center 46%;
+}
+
+.music-page .work-hero::before{
+  background-image:url("https://media.2sayfilms.com/music-01.webp"),url("vlcsnap-2026-09-10-22h52m08s626.png");
+  background-position:center 42%;
+}
+
+.corporate-page .work-hero::before{
+  background-image:url("assets/coming-soon-corporates.webp");
+  background-position:center;
+}
+
+.work-detail-page .work-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 77% 45%,rgba(212,143,73,.12),transparent 28rem),
+    linear-gradient(90deg,rgba(5,4,3,.96) 0%,rgba(5,4,3,.82) 24%,rgba(6,4,3,.35) 52%,rgba(4,3,2,.38) 100%),
+    linear-gradient(to top,rgba(7,5,3,.90) 0%,transparent 44%,rgba(5,4,3,.22) 100%);
+}
+
+.work-detail-page .work-hero-grid{
+  grid-column:1 / 13;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1rem;
+  align-items:end;
+}
+
+.work-detail-page .work-hero-copy{
+  grid-column:1 / 5;
+  max-width:560px;
+}
+
+.work-detail-page .work-eyebrow{
+  display:flex;
+  align-items:center;
+  gap:.9rem;
+  margin:0 0 1rem;
+  font-size:.56rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:#d6c3aa;
+}
+
+.work-detail-page .work-eyebrow::after{
+  content:"";
+  width:3.2rem;
+  height:1px;
+  background:rgba(206,159,105,.62);
+}
+
+.work-detail-page .work-hero h1{
+  margin:0 0 1.3rem;
+  max-width:7ch;
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(5.6rem,9vw,10.4rem);
+  line-height:.78;
+  letter-spacing:-.055em;
+  color:var(--page-paper);
+  text-shadow:0 18px 60px rgba(0,0,0,.40);
+}
+
+.work-detail-page .work-intro{
+  max-width:450px;
+  margin:0;
+  color:#d1c7bb;
+  line-height:1.62;
+  font-size:.84rem;
+}
+
+.work-detail-page .work-locale{
+  display:block;
+  margin-top:1.4rem;
+  color:#aa9a88;
+  font-size:.51rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .work-hero-mantra{
+  grid-column:10 / 13;
+  justify-self:end;
+  align-self:end;
+  display:grid;
+  grid-template-columns:auto 1px;
+  gap:1.2rem;
+  align-items:center;
+  margin-bottom:.5rem;
+}
+
+.work-detail-page .work-hero-mantra p{
+  margin:0;
+  text-align:right;
+  font-size:.55rem;
+  line-height:1.9;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:#c8baa9;
+}
+
+.work-detail-page .work-hero-mantra span{
+  display:block;
+  width:1px;
+  height:6rem;
+  background:linear-gradient(to bottom,transparent,rgba(205,158,106,.8),transparent);
+}
+
+.work-detail-page .work-collection{
+  padding:0 4.6vw;
+  background:
+    radial-gradient(circle at 12% 8%,rgba(117,68,31,.08),transparent 30rem),
+    radial-gradient(circle at 88% 52%,rgba(92,56,31,.055),transparent 34rem),
+    linear-gradient(180deg,#090806 0%,#0d0a07 48%,#090806 100%);
+}
+
+.work-detail-page .collection-head{
+  min-height:110px;
+  display:flex;
+  justify-content:space-between;
+  gap:2rem;
+  align-items:center;
+  border-bottom:1px solid var(--page-line);
+  color:#9f9181;
+  font-size:.52rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .collection-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  border-left:1px solid rgba(255,255,255,.055);
+}
+
+.work-detail-page .work-card{
+  position:relative;
+  grid-column:span 4;
+  min-width:0;
+  padding:1.2rem 1.15rem 2.3rem;
+  border-right:1px solid rgba(255,255,255,.055);
+  border-bottom:1px solid rgba(255,255,255,.055);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.009),transparent 28%);
+  transition:background .35s ease;
+}
+
+.work-detail-page .work-card:nth-child(4),
+.work-detail-page .work-card:nth-child(5){
+  grid-column:span 6;
+}
+
+.work-detail-page .work-card:hover{
+  background:
+    radial-gradient(circle at 50% 18%,rgba(171,111,59,.075),transparent 24rem),
+    linear-gradient(180deg,rgba(255,255,255,.014),transparent 32%);
+}
+
+.work-detail-page .work-card-top{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  height:2.2rem;
+  color:#9e8e7d;
+  font-size:.50rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .work-card-top::after{
+  content:"";
+  width:2.6rem;
+  height:1px;
+  background:rgba(206,159,105,.55);
+}
+
+.work-detail-page .work-card-image{
+  position:relative;
+  aspect-ratio:1.78 / 1;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+  border:1px solid rgba(255,255,255,.07);
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+}
+
+.work-detail-page .work-card:nth-child(4) .work-card-image,
+.work-detail-page .work-card:nth-child(5) .work-card-image{
+  aspect-ratio:2.15 / 1;
+}
+
+.work-detail-page .work-card-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to top,rgba(5,3,2,.25),transparent 45%),
+    radial-gradient(circle at 80% 20%,rgba(186,117,58,.045),transparent 18rem);
+  transition:background .45s ease;
+}
+
+.work-detail-page .work-card:hover .work-card-image{
+  transform:translateY(-2px);
+}
+
+.work-detail-page .work-card-image{
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),filter .45s ease;
+}
+
+.work-detail-page .work-card:hover .work-card-image{
+  filter:brightness(1.04) saturate(1.03);
+}
+
+.work-detail-page .work-card-body{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:1rem;
+  align-items:start;
+  padding-top:1rem;
+}
+
+.work-detail-page .work-card h2{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(2.1rem,2.5vw,3.4rem);
+  line-height:.9;
+  font-weight:400;
+  letter-spacing:-.035em;
+  color:var(--page-paper);
+}
+
+.work-detail-page .work-card-meta{
+  text-align:right;
+  color:#938576;
+  font-size:.49rem;
+  line-height:1.55;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .work-card p{
+  grid-column:1 / -1;
+  margin:.8rem 0 0;
+  max-width:46ch;
+  color:#aaa093;
+  font-size:.72rem;
+  line-height:1.55;
+}
+
+.work-detail-page .work-card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.8rem;
+  margin-top:1.1rem;
+  color:#d6c5af;
+  font-size:.50rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .work-card-link::after{
+  content:"→";
+  font-size:.75rem;
+  transition:transform .25s ease;
+}
+
+.work-detail-page .work-card:hover .work-card-link::after{
+  transform:translateX(.35rem);
+}
+
+.work-detail-page .work-card-link-line{
+  display:block;
+  width:4rem;
+  height:1px;
+  margin-top:.55rem;
+  background:rgba(206,159,105,.62);
+}
+
+.work-detail-page .work-cta{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1rem;
+  align-items:end;
+  min-height:310px;
+  padding:4.8rem 4.6vw 4.5rem;
+  border-top:1px solid var(--page-line);
+  background:
+    radial-gradient(circle at 14% 65%,rgba(155,88,37,.17),transparent 27rem),
+    radial-gradient(circle at 73% 38%,rgba(139,87,46,.08),transparent 28rem),
+    linear-gradient(120deg,#130d08,#0b0907 58%,#090806);
+}
+
+.work-detail-page .work-cta-main{
+  grid-column:1 / 6;
+}
+
+.work-detail-page .work-cta small{
+  display:block;
+  margin-bottom:.9rem;
+  color:#b99c7c;
+  font-size:.50rem;
+  letter-spacing:.29em;
+  text-transform:uppercase;
+}
+
+.work-detail-page .work-cta h2{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(3.8rem,6vw,7rem);
+  font-weight:400;
+  line-height:.84;
+  letter-spacing:-.05em;
+  color:var(--page-paper);
+}
+
+.work-detail-page .work-cta-copy{
+  grid-column:7 / 10;
+  align-self:center;
+  margin:0;
+  color:#a99c8e;
+  line-height:1.6;
+  font-size:.75rem;
+}
+
+.work-detail-page .work-cta-action{
+  grid-column:10 / 13;
+  justify-self:end;
+  display:inline-flex;
+  align-items:center;
+  gap:2rem;
+  padding:1rem 1.3rem;
+  border:1px solid rgba(238,224,204,.28);
+  color:#d9cec0;
+  font-size:.52rem;
+  letter-spacing:.23em;
+  text-transform:uppercase;
+  transition:background .25s ease,color .25s ease,border-color .25s ease;
+}
+
+.work-detail-page .work-cta-action:hover{
+  background:#e8ddd0;
+  color:#0a0806;
+  border-color:#e8ddd0;
+}
+
+.work-detail-page .site-footer{
+  background:#080706;
+}
+
+/* Artwork assignments */
+.work-detail-page .short-01-img{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.work-detail-page .short-02-img{background-image:url("https://media.2sayfilms.com/short-02.webp");}
+.work-detail-page .short-03-img{background-image:url("https://media.2sayfilms.com/short-03.webp");}
+.work-detail-page .short-04-img{background-image:url("https://media.2sayfilms.com/short-04.webp");}
+.work-detail-page .short-05-img{background-image:url("https://media.2sayfilms.com/short-05.webp");}
+
+.work-detail-page .music-01-img{background-image:url("https://media.2sayfilms.com/music-01.webp");}
+.work-detail-page .music-02-img{background-image:url("https://media.2sayfilms.com/music-02.webp");}
+.work-detail-page .music-03-img{background-image:url("https://media.2sayfilms.com/music-03.webp");}
+.work-detail-page .music-04-img{background-image:url("https://media.2sayfilms.com/music-04.webp");}
+.work-detail-page .music-05-img{background-image:url("https://media.2sayfilms.com/music-05.webp");}
+
+.work-detail-page .corp-01-img,
+.work-detail-page .corp-02-img{background-image:url("assets/coming-soon-corporates.webp");}
+.work-detail-page .corp-03-img{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
+.work-detail-page .corp-04-img{background-image:url("https://media.2sayfilms.com/corp-04.webp");}
+.work-detail-page .corp-05-img{background-image:url("https://media.2sayfilms.com/corp-05.webp");}
+
+@media(max-width:980px){
+  .work-detail-page .work-hero{
+    min-height:700px;
+    height:82vh;
+  }
+
+  .work-detail-page .work-hero-copy{
+    grid-column:1 / 7;
+  }
+
+  .work-detail-page .work-hero-mantra{
+    grid-column:9 / 13;
+  }
+
+  .work-detail-page .work-card{
+    grid-column:span 6;
+  }
+
+  .work-detail-page .work-card:nth-child(5){
+    grid-column:1 / 7;
+  }
+
+  .work-detail-page .work-cta-main{grid-column:1 / 7;}
+  .work-detail-page .work-cta-copy{grid-column:7 / 10;}
+  .work-detail-page .work-cta-action{grid-column:10 / 13;}
+}
+
+@media(max-width:720px){
+  .work-detail-page .work-hero{
+    min-height:700px;
+    height:auto;
+    padding:7.5rem 1.25rem 3.5rem;
+    align-items:end;
+  }
+
+  .work-detail-page .work-hero-grid{
+    display:block;
+  }
+
+  .work-detail-page .work-hero-copy{
+    max-width:none;
+  }
+
+  .work-detail-page .work-hero h1{
+    font-size:clamp(4.6rem,20vw,7rem);
+    margin-bottom:1.1rem;
+  }
+
+  .work-detail-page .work-intro{
+    max-width:34rem;
+  }
+
+  .work-detail-page .work-hero-mantra{
+    display:none;
+  }
+
+  .work-detail-page .work-collection{
+    padding:0 1.1rem;
+  }
+
+  .work-detail-page .collection-head{
+    min-height:88px;
+    font-size:.46rem;
+  }
+
+  .work-detail-page .collection-grid{
+    display:block;
+    border-left:0;
+  }
+
+  .work-detail-page .work-card,
+  .work-detail-page .work-card:nth-child(4),
+  .work-detail-page .work-card:nth-child(5){
+    padding:1rem 0 2.5rem;
+    border-right:0;
+  }
+
+  .work-detail-page .work-card-image,
+  .work-detail-page .work-card:nth-child(4) .work-card-image,
+  .work-detail-page .work-card:nth-child(5) .work-card-image{
+    aspect-ratio:16 / 10;
+  }
+
+  .work-detail-page .work-card h2{
+    font-size:2.6rem;
+  }
+
+  .work-detail-page .work-card-meta{
+    font-size:.45rem;
+  }
+
+  .work-detail-page .work-cta{
+    display:block;
+    min-height:0;
+    padding:4.2rem 1.25rem;
+  }
+
+  .work-detail-page .work-cta h2{
+    font-size:clamp(3.7rem,16vw,5.7rem);
+  }
+
+  .work-detail-page .work-cta-copy{
+    margin:1.5rem 0 2rem;
+    max-width:34rem;
+  }
+
+  .work-detail-page .work-cta-action{
+    justify-self:start;
+  }
+}
