@@ -556,7 +556,7 @@
     box-shadow .45s ease;
 }
 
-.work-detail-page .music-nee-vendume::before{
+.work-detail-page .playable-thumbnail::before{
   content:"▶";
   position:absolute;
   left:50%;
@@ -586,7 +586,7 @@
     background .4s ease;
 }
 
-.work-detail-page .music-nee-vendume::after{
+.work-detail-page .playable-thumbnail::after{
   content:"";
   position:absolute;
   inset:0;
@@ -599,8 +599,8 @@
   transition:background .45s ease,box-shadow .45s ease;
 }
 
-.work-detail-page .music-nee-vendume:hover,
-.work-detail-page .music-nee-vendume:focus-visible{
+.work-detail-page .playable-thumbnail:hover,
+.work-detail-page .playable-thumbnail:focus-visible{
   transform:translateY(-4px) scale(1.006);
   filter:brightness(1.08) saturate(1.06);
   box-shadow:
@@ -611,8 +611,8 @@
   outline:none;
 }
 
-.work-detail-page .music-nee-vendume:hover::before,
-.work-detail-page .music-nee-vendume:focus-visible::before{
+.work-detail-page .playable-thumbnail:hover::before,
+.work-detail-page .playable-thumbnail:focus-visible::before{
   transform:translate(-50%,-50%) scale(1.06);
   opacity:1;
   background:rgba(18,9,4,.48);
@@ -622,8 +622,8 @@
     0 16px 46px rgba(0,0,0,.34);
 }
 
-.work-detail-page .music-nee-vendume:hover::after,
-.work-detail-page .music-nee-vendume:focus-visible::after{
+.work-detail-page .playable-thumbnail:hover::after,
+.work-detail-page .playable-thumbnail:focus-visible::after{
   background:
     radial-gradient(circle at 50% 50%,rgba(204,119,54,.14),transparent 30%),
     radial-gradient(circle at 72% 20%,rgba(221,161,100,.08),transparent 27%),
@@ -745,3 +745,18 @@ body.project-video-open{
   color:#c6b7a6;
 }
 
+
+
+.work-detail-page .playable-thumbnail{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.05);
+  transition:
+    transform .45s cubic-bezier(.2,.7,.2,1),
+    filter .45s ease,
+    box-shadow .45s ease;
+}
