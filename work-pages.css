@@ -840,27 +840,19 @@ body.project-video-open{
 
 .work-detail-page .narrative-ymk-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/YMK%20ASSET.png"),
-    url("https://media.2sayfilms.com/YMK%20ASSET.jpg"),
-    url("https://media.2sayfilms.com/YMK%20ASSET.jpeg"),
-    url("https://media.2sayfilms.com/YMK%20ASSET.webp"),
-    url("https://media.2sayfilms.com/short-02.webp");
-  background-position:center;
-  background-size:108% auto,108% auto,108% auto,108% auto,cover;
+  background-image:url("https://media.2sayfilms.com/YMK%20ASSET.png");
+  background-position:center center;
+  background-size:122% auto;
   background-repeat:no-repeat;
+  background-color:#0a0a0a;
 }
 
 
 .work-detail-page .narrative-kk-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/KK%20ASSET.png"),
-    url("https://media.2sayfilms.com/KK%20ASSET.jpg"),
-    url("https://media.2sayfilms.com/KK%20ASSET.jpeg"),
-    url("https://media.2sayfilms.com/KK%20ASSET.webp"),
-    url("https://media.2sayfilms.com/short-03.webp");
-  background-position:center;
-  background-size:112% auto,112% auto,112% auto,112% auto,cover;
+  background-image:url("https://media.2sayfilms.com/KK%20ASSET.png");
+  background-position:center center;
+  background-size:120% auto;
   background-repeat:no-repeat;
+  background-color:#0a0a0a;
 }
