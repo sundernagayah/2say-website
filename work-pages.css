@@ -60,7 +60,10 @@
 }
 
 .corporate-page .work-hero::before{
-  background-image:url("assets/coming-soon-corporates.webp");
+  background-image:
+    url("https://media.2sayfilms.com/CORPORATE%20TITLE.png"),
+    url("https://media.2sayfilms.com/corp-03.webp"),
+    url("vlcsnap-2026-09-10-22h52m08s626.png");
   background-position:center;
 }
 
