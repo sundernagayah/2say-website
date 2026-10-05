@@ -1108,9 +1108,21 @@ body::before{
 }
 
 
-/* Brighter live work thumbnails — Narrative, Music Videos, Corporates */
+/* Brighter live work thumbnails — Narrative, Music Videos, Corporates.
+   Let the photography carry the cards; only protect the title area. */
+.work-index-grid > .work-category:not(.is-coming) .work-category-media{
+  filter:saturate(.96) contrast(1.01) brightness(1.04);
+}
+
 .work-index-grid > .work-category:not(.is-coming)::after{
   background:
-    linear-gradient(to top,rgba(5,3,2,.50) 0%,rgba(8,5,3,.13) 46%,rgba(0,0,0,.06) 100%),
-    linear-gradient(90deg,rgba(20,10,4,.15),transparent 62%);
+    linear-gradient(to top,
+      rgba(4,2,1,.42) 0%,
+      rgba(4,2,1,.18) 18%,
+      rgba(4,2,1,.035) 42%,
+      transparent 68%);
+}
+
+.work-index-grid > .work-category:not(.is-coming):hover .work-category-media{
+  filter:saturate(1) contrast(1.015) brightness(1.08);
 }
