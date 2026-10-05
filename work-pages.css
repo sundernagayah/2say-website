@@ -856,3 +856,13 @@ body.project-video-open{
   background-repeat:no-repeat;
   background-color:#0a0a0a;
 }
+
+
+.work-detail-page .narrative-erisudar-thumbnail{
+  display:block;
+  background-image:url("https://media.2sayfilms.com/ERISUDAR%20ASSET.png");
+  background-position:center center;
+  background-size:112% auto;
+  background-repeat:no-repeat;
+  background-color:#0a0a0a;
+}
