@@ -800,3 +800,14 @@ body.project-video-open{
       transparent 40%,
       rgba(5,4,3,.10) 100%);
 }
+
+
+.work-detail-page .music-nittham-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/short-06.webp"),
+    url("https://media.2sayfilms.com/music-04.webp");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
