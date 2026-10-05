@@ -822,3 +822,17 @@ body.project-video-open{
   background-size:104% auto,cover;
   background-repeat:no-repeat;
 }
+
+
+.work-detail-page .narrative-alter-thumbnail{
+  display:block;
+  background-image:
+    url("https://media.2sayfilms.com/ALTER%20ASSET.png"),
+    url("https://media.2sayfilms.com/ALTER%20ASSET.jpg"),
+    url("https://media.2sayfilms.com/ALTER%20ASSET.jpeg"),
+    url("https://media.2sayfilms.com/ALTER%20ASSET.webp"),
+    url("https://media.2sayfilms.com/short-01.webp");
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
