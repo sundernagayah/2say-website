@@ -550,7 +550,7 @@
     url("https://media.2sayfilms.com/Nee%20Vendume.webp"),
     url("https://img.youtube.com/vi/nWTO-C2QkF0/maxresdefault.jpg");
   background-position:center;
-  background-size:cover;
+  background-size:112% auto,112% auto,112% auto,112% auto,cover;
   background-repeat:no-repeat;
   cursor:pointer;
   box-shadow:
