@@ -148,7 +148,7 @@ body{
 .is-coming{cursor:default;}
 
 .feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-media{background-image:url("https://media.2sayfilms.com/NARRATIVE%20THUMBNAIL.png"),url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-media{background-image:url("https://media.2sayfilms.com/NARRATIVE%20THUMBNAIL.png");background-color:#111;}
 .music-media{background-image:url("https://media.2sayfilms.com/MUSIC%20VIDEO%20THUMBNAIL.png"),url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 .corp-media{background-image:url("https://media.2sayfilms.com/CORPORATE%20TITLE.png?v=20261005-1439"),url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
 
@@ -1128,9 +1128,16 @@ body::before{
 }
 
 
-/* Narrative thumbnail crop — zoom past baked-in letterbox bars and keep subject centered. */
+/* Narrative thumbnail crop — only the current artwork is rendered, so no old image can show behind it. */
 .work-index-grid .short-media{
-  background-size:118% auto, cover, cover;
-  background-position:center center, center, center;
+  background-size:118% auto;
+  background-position:center center;
   background-repeat:no-repeat;
+}
+
+@media(max-width:720px){
+  .work-index-grid .short-media{
+    background-size:cover;
+    background-position:center center;
+  }
 }
