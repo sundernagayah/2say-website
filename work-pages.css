@@ -534,13 +534,103 @@
 
 .work-detail-page .music-nee-vendume{
   display:block;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
   background-image:
-    url("https://img.youtube.com/vi/nWTO-C2QkF0/maxresdefault.jpg"),
-    url("https://img.youtube.com/vi/nWTO-C2QkF0/hqdefault.jpg");
+    url("https://media.2sayfilms.com/Nee%20Vendume.png"),
+    url("https://media.2sayfilms.com/Nee%20Vendume.jpg"),
+    url("https://media.2sayfilms.com/Nee%20Vendume.jpeg"),
+    url("https://media.2sayfilms.com/Nee%20Vendume.webp"),
+    url("https://img.youtube.com/vi/nWTO-C2QkF0/maxresdefault.jpg");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
   cursor:pointer;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.05);
+  transition:
+    transform .45s cubic-bezier(.2,.7,.2,1),
+    filter .45s ease,
+    box-shadow .45s ease;
+}
+
+.work-detail-page .music-nee-vendume::before{
+  content:"▶";
+  position:absolute;
+  left:50%;
+  top:50%;
+  z-index:3;
+  display:grid;
+  place-items:center;
+  width:3.75rem;
+  height:3.75rem;
+  padding-left:.22rem;
+  border:1px solid rgba(248,226,200,.66);
+  border-radius:50%;
+  background:rgba(8,5,3,.34);
+  color:#f3e5d4;
+  font-size:.9rem;
+  line-height:1;
+  transform:translate(-50%,-50%) scale(.92);
+  backdrop-filter:blur(8px);
+  box-shadow:
+    0 0 0 0 rgba(198,123,61,0),
+    0 12px 40px rgba(0,0,0,.28);
+  opacity:.82;
+  transition:
+    transform .4s cubic-bezier(.2,.7,.2,1),
+    opacity .35s ease,
+    box-shadow .4s ease,
+    background .4s ease;
+}
+
+.work-detail-page .music-nee-vendume::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(194,111,49,.03),transparent 28%),
+    linear-gradient(to top,rgba(7,3,2,.26),transparent 48%);
+  box-shadow:inset 0 0 0 1px rgba(232,188,139,.08);
+  transition:background .45s ease,box-shadow .45s ease;
+}
+
+.work-detail-page .music-nee-vendume:hover,
+.work-detail-page .music-nee-vendume:focus-visible{
+  transform:translateY(-4px) scale(1.006);
+  filter:brightness(1.08) saturate(1.06);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.38),
+    0 0 26px rgba(187,103,44,.28),
+    0 0 70px rgba(187,103,44,.12),
+    0 0 0 1px rgba(229,182,126,.28);
+  outline:none;
+}
+
+.work-detail-page .music-nee-vendume:hover::before,
+.work-detail-page .music-nee-vendume:focus-visible::before{
+  transform:translate(-50%,-50%) scale(1.06);
+  opacity:1;
+  background:rgba(18,9,4,.48);
+  box-shadow:
+    0 0 0 10px rgba(194,111,49,.06),
+    0 0 38px rgba(194,111,49,.38),
+    0 16px 46px rgba(0,0,0,.34);
+}
+
+.work-detail-page .music-nee-vendume:hover::after,
+.work-detail-page .music-nee-vendume:focus-visible::after{
+  background:
+    radial-gradient(circle at 50% 50%,rgba(204,119,54,.14),transparent 30%),
+    radial-gradient(circle at 72% 20%,rgba(221,161,100,.08),transparent 27%),
+    linear-gradient(to top,rgba(8,4,2,.22),transparent 50%);
+  box-shadow:
+    inset 0 0 0 1px rgba(235,192,142,.18),
+    inset 0 0 65px rgba(180,88,34,.08);
 }
 
 
@@ -637,4 +727,20 @@ body.project-video-open{
 
 .keep-together{
   white-space:nowrap;
+}
+
+
+.work-detail-page .project-credits{
+  display:flex;
+  flex-direction:column;
+  gap:.28rem;
+}
+
+.work-detail-page .project-credits span{
+  display:block;
+}
+
+.work-detail-page .project-credits strong{
+  font-weight:500;
+  color:#c6b7a6;
 }
