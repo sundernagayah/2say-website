@@ -1126,3 +1126,11 @@ body::before{
 .work-index-grid > .work-category:not(.is-coming):hover .work-category-media{
   filter:saturate(1) contrast(1.015) brightness(1.08);
 }
+
+
+/* Narrative thumbnail crop — zoom past baked-in letterbox bars and keep subject centered. */
+.work-index-grid .short-media{
+  background-size:118% auto, cover, cover;
+  background-position:center center, center, center;
+  background-repeat:no-repeat;
+}
