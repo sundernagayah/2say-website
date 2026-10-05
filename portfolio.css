@@ -1111,6 +1111,6 @@ body::before{
 /* Brighter live work thumbnails — Narrative, Music Videos, Corporates */
 .work-index-grid > .work-category:not(.is-coming)::after{
   background:
-    linear-gradient(to top,rgba(5,3,2,.70) 0%,rgba(8,5,3,.18) 46%,rgba(0,0,0,.08) 100%),
-    linear-gradient(90deg,rgba(20,10,4,.21),transparent 62%);
+    linear-gradient(to top,rgba(5,3,2,.50) 0%,rgba(8,5,3,.13) 46%,rgba(0,0,0,.06) 100%),
+    linear-gradient(90deg,rgba(20,10,4,.15),transparent 62%);
 }
