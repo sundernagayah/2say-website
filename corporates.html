@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="portfolio.css?v=20261005-1439" />
-  <link rel="stylesheet" href="work-pages.css?v=20261005-1439" />
+  <link rel="stylesheet" href="work-pages.css?v=20261006-bhumi" />
 </head>
 <body class="portfolio-page work-detail-page corporate-page">
   <header class="site-header">
@@ -50,13 +50,26 @@
 
           <article class="work-card">
             <div class="work-card-top">01</div>
-            <div class="work-card-image corp-01-img" aria-hidden="true"></div>
+            <button
+              class="work-card-image corporate-bhumi-thumbnail playable-thumbnail video-modal-trigger"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/6JvcTixFK6Q?autoplay=1&rel=0&playsinline=1"
+              aria-label="Play Bhumi">
+            </button>
             <div class="work-card-body">
-              <h2>Project 01</h2>
-              <div class="work-card-meta">Private Release<br>Coming Soon</div>
-              <p>Project imagery is being withheld until public release.</p>
+              <h2>Bhumi</h2>
+              <div class="work-card-meta">Corporate Film<br>Selected Work</div>
+              <p class="project-credits">
+                <span><strong>Client:</strong><br><span class="keep-together">Maya Dance Theatre</span></span>
+                <span><strong>Producer:</strong><br><span class="keep-together">2Say Films</span></span>
+              </p>
               <div>
-                <span class="work-card-link">Project details</span>
+                <button
+                  class="work-card-link work-card-link-button video-modal-trigger"
+                  type="button"
+                  data-video-src="https://www.youtube.com/embed/6JvcTixFK6Q?autoplay=1&rel=0&playsinline=1">
+                  Watch Film
+                </button>
                 <span class="work-card-link-line"></span>
               </div>
             </div>
@@ -129,6 +142,19 @@
       <a class="work-cta-action" href="index.html#contact">Start a conversation <span>→</span></a>
     </section>
   </main>
+
+  <div class="project-video-modal" id="project-video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="project-video-close" id="project-video-close" type="button" aria-label="Close video">×</button>
+    <div class="project-video-frame">
+      <iframe
+        id="project-video-player"
+        src=""
+        title="2Say Films video"
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="brand footer-brand">2SAY</div>
