@@ -886,3 +886,13 @@ body.project-video-open{
   background-repeat:no-repeat;
   background-color:#0a0a0a;
 }
+
+
+.work-detail-page .corporate-casurina-thumbnail{
+  display:block;
+  background-image:url("https://media.2sayfilms.com/CASURINA%20ASSET.png");
+  background-position:center center;
+  background-size:112% auto;
+  background-repeat:no-repeat;
+  background-color:#0a0a0a;
+}
