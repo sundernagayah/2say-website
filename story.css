@@ -495,7 +495,7 @@
     overflow:hidden;
     background:
       linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.48) 48%,rgba(0,0,0,.64) 100%),
-      url("https://media.2sayfilms.com/REMEMBER.png") center center / cover no-repeat;
+      url("assets/remember-generated.webp") center center / cover no-repeat;
   }
 
   .story-page .story-close::before{
