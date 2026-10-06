@@ -163,3 +163,11 @@ document.addEventListener('keydown', (event) => {
     closeProjectVideo();
   }
 });
+
+
+// Ensure all reveal content is visible before printing.
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.reveal-item').forEach((el) => {
+    el.classList.add('is-visible');
+  });
+});
