@@ -226,7 +226,9 @@ body{
 }
 
 .contact-banner{
-  background:\n    linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),\n    url("https://media.2sayfilms.com/corp-03.webp") center / cover;
+  background:
+    linear-gradient(90deg,rgba(24,10,5,.90) 0%,rgba(22,11,7,.58) 48%,rgba(6,8,9,.46) 100%),
+    url("https://media.2sayfilms.com/corp-03.webp") center 58% / cover no-repeat;
 }
 
 /* Portfolio pages */
