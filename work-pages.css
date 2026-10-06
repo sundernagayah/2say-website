@@ -52,18 +52,12 @@
 }
 
 .music-page .work-hero::before{
-  background-image:
-    url("https://media.2sayfilms.com/MUSIC%20VIDEO%20THUMBNAIL.png"),
-    url("https://media.2sayfilms.com/music-01.webp"),
-    url("vlcsnap-2026-09-10-22h52m08s626.png");
+  background-image:url("https://media.2sayfilms.com/MUSIC%20VIDEO%20THUMBNAIL.png");
   background-position:center;
 }
 
 .corporate-page .work-hero::before{
-  background-image:
-    url("https://media.2sayfilms.com/CORPORATE%20TITLE.png?v=20261005-1439"),
-    url("https://media.2sayfilms.com/corp-03.webp"),
-    url("vlcsnap-2026-09-10-22h52m08s626.png");
+  background-image:url("https://media.2sayfilms.com/CORPORATE%20TITLE.png?v=20261005-1439");
   background-position:center;
 }
 
@@ -543,14 +537,9 @@
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  background-image:
-    url("https://media.2sayfilms.com/Nee%20Vendume.png"),
-    url("https://media.2sayfilms.com/Nee%20Vendume.jpg"),
-    url("https://media.2sayfilms.com/Nee%20Vendume.jpeg"),
-    url("https://media.2sayfilms.com/Nee%20Vendume.webp"),
-    url("https://img.youtube.com/vi/nWTO-C2QkF0/maxresdefault.jpg");
+  background-image:url("https://media.2sayfilms.com/Nee%20Vendume.png");
   background-position:center;
-  background-size:132% auto,132% auto,132% auto,132% auto,cover;
+  background-size:132% auto;
   background-repeat:no-repeat;
   cursor:pointer;
   box-shadow:
@@ -770,12 +759,7 @@ body.project-video-open{
 
 .work-detail-page .music-kaviye-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.png"),
-    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.jpg"),
-    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.jpeg"),
-    url("https://media.2sayfilms.com/Kaviye%20Thumbnail.webp"),
-    url("https://media.2sayfilms.com/music-03.webp");
+  background-image:url("https://media.2sayfilms.com/Kaviye%20Thumbnail.png");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -804,9 +788,7 @@ body.project-video-open{
 
 .work-detail-page .music-nittham-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/short-06.webp"),
-    url("https://media.2sayfilms.com/music-04.webp");
+  background-image:url("https://media.2sayfilms.com/short-06.webp");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -815,23 +797,16 @@ body.project-video-open{
 
 .work-detail-page .music-boogieverse-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/BOOGIEVERSE%20THUMBNAIL.png"),
-    url("https://media.2sayfilms.com/music-05.webp");
+  background-image:url("https://media.2sayfilms.com/BOOGIEVERSE%20THUMBNAIL.png");
   background-position:center;
-  background-size:104% auto,cover;
+  background-size:104% auto;
   background-repeat:no-repeat;
 }
 
 
 .work-detail-page .narrative-alter-thumbnail{
   display:block;
-  background-image:
-    url("https://media.2sayfilms.com/ALTER%20ASSET.png"),
-    url("https://media.2sayfilms.com/ALTER%20ASSET.jpg"),
-    url("https://media.2sayfilms.com/ALTER%20ASSET.jpeg"),
-    url("https://media.2sayfilms.com/ALTER%20ASSET.webp"),
-    url("https://media.2sayfilms.com/short-01.webp");
+  background-image:url("https://media.2sayfilms.com/ALTER%20ASSET.png");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -895,4 +870,11 @@ body.project-video-open{
   background-size:112% auto;
   background-repeat:no-repeat;
   background-color:#0a0a0a;
+}
+
+
+/* Defer rendering of off-screen project cards */
+.work-card{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 640px;
 }
