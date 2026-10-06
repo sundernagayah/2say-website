@@ -1,0 +1,487 @@
+:root{
+  --story-black:#050505;
+  --story-white:#f1f1ed;
+  --story-grey:#a7a7a2;
+  --story-line:rgba(255,255,255,.16);
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Manrope", Arial, sans-serif;
+}
+
+.story-page{
+  margin:0;
+  background:var(--story-black);
+  color:var(--story-white);
+  font-family:var(--sans);
+  overflow-x:hidden;
+}
+
+.story-page::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:999;
+  pointer-events:none;
+  opacity:.035;
+  mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+}
+
+.story-page .brand,
+.story-page h1,
+.story-page h2,
+.story-page h3,
+.story-page blockquote{
+  font-family:var(--serif);
+  font-weight:400;
+}
+
+.story-header{
+  background:linear-gradient(to bottom,rgba(0,0,0,.86),rgba(0,0,0,.08));
+}
+
+.story-hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  border-bottom:1px solid var(--story-line);
+}
+
+.story-hero-image{
+  position:absolute;
+  inset:0;
+  background-image:url("https://media.2sayfilms.com/DANCE%20BTS.png");
+  background-position:center;
+  background-size:cover;
+  filter:grayscale(1) contrast(1.15) brightness(.52);
+  transform:scale(1.025);
+}
+
+.story-hero-shade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.48) 45%,rgba(0,0,0,.12) 74%),
+    linear-gradient(to top,rgba(0,0,0,.7),transparent 50%);
+}
+
+.story-hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(900px,72vw);
+  padding:0 0 7vh 5.5vw;
+}
+
+.story-kicker,
+.story-section-label,
+.story-hero-index{
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:.58rem;
+}
+
+.story-kicker{
+  margin:0 0 1.2rem;
+  color:#c5c5c1;
+}
+
+.story-hero h1{
+  margin:0;
+  font-size:clamp(4.7rem,9.6vw,10.5rem);
+  line-height:.76;
+  letter-spacing:-.055em;
+}
+
+.story-hero h1 em{
+  font-weight:400;
+}
+
+.story-lede{
+  max-width:600px;
+  margin:2rem 0 0;
+  font-size:.92rem;
+  line-height:1.8;
+  color:#d2d2ce;
+}
+
+.story-hero-index{
+  position:absolute;
+  right:4vw;
+  bottom:7vh;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:.45rem;
+  color:#aaa;
+}
+
+.story-origin,
+.story-beliefs,
+.story-process,
+.story-close{
+  padding:8rem 5vw;
+}
+
+.story-origin{
+  display:grid;
+  grid-template-columns:1.1fr 4fr 1.5fr;
+  gap:4vw;
+  border-bottom:1px solid var(--story-line);
+}
+
+.story-section-label{
+  color:#8d8d89;
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+}
+
+.story-origin-copy h2,
+.story-process-copy h2,
+.story-close h2{
+  margin:0;
+  font-size:clamp(4rem,7vw,7.8rem);
+  line-height:.86;
+  letter-spacing:-.045em;
+}
+
+.story-origin-copy p{
+  max-width:760px;
+  margin:2rem 0 0;
+  color:#c9c9c4;
+  font-size:1rem;
+  line-height:1.9;
+}
+
+.story-note{
+  align-self:end;
+  border-top:1px solid var(--story-line);
+  padding-top:1.2rem;
+  color:#a5a5a0;
+}
+
+.story-note span{
+  display:block;
+  color:#efefeb;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+}
+
+.story-note p{
+  margin:0;
+  font-size:.78rem;
+  line-height:1.7;
+}
+
+.story-statement{
+  position:relative;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom:1px solid var(--story-line);
+}
+
+.story-statement-image{
+  position:absolute;
+  inset:0;
+  background-image:url("https://media.2sayfilms.com/NARRATIVE%20THUMBNAIL.png");
+  background-position:center;
+  background-size:cover;
+  filter:grayscale(1) contrast(1.25) brightness(.30);
+}
+
+.story-statement::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 75% 42%,transparent,rgba(0,0,0,.56) 55%,rgba(0,0,0,.86));
+}
+
+.story-statement-copy{
+  position:relative;
+  z-index:2;
+  width:min(1050px,86vw);
+  margin-left:5vw;
+}
+
+.story-statement-copy span{
+  font-size:.58rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:#b7b7b3;
+}
+
+.story-statement blockquote{
+  margin:1.4rem 0 0;
+  max-width:13ch;
+  font-size:clamp(4rem,7.5vw,8.8rem);
+  line-height:.86;
+  letter-spacing:-.04em;
+}
+
+.story-beliefs{
+  border-bottom:1px solid var(--story-line);
+}
+
+.story-belief-grid{
+  margin-top:4rem;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--story-line);
+  border-left:1px solid var(--story-line);
+}
+
+.story-belief-grid article{
+  min-height:330px;
+  padding:2.3rem;
+  border-right:1px solid var(--story-line);
+  border-bottom:1px solid var(--story-line);
+}
+
+.story-belief-grid article > span{
+  display:block;
+  margin-bottom:5rem;
+  font-size:.58rem;
+  letter-spacing:.18em;
+  color:#777;
+}
+
+.story-belief-grid h3{
+  margin:0 0 1rem;
+  font-size:clamp(2.4rem,4vw,4.6rem);
+  line-height:.92;
+  letter-spacing:-.035em;
+}
+
+.story-belief-grid p{
+  max-width:470px;
+  color:#a9a9a4;
+  line-height:1.75;
+  font-size:.82rem;
+}
+
+.story-process{
+  min-height:70vh;
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:5vw;
+  align-items:center;
+  border-bottom:1px solid var(--story-line);
+  overflow:hidden;
+}
+
+.story-process-mark{
+  font-family:var(--serif);
+  font-size:clamp(8rem,22vw,27rem);
+  line-height:.65;
+  letter-spacing:-.08em;
+  color:#101010;
+  -webkit-text-stroke:1px rgba(255,255,255,.11);
+  user-select:none;
+}
+
+.story-process-copy p:last-child{
+  max-width:650px;
+  margin:2.3rem 0 0;
+  color:#aaa;
+  line-height:1.85;
+  font-size:.88rem;
+}
+
+.story-close{
+  display:grid;
+  grid-template-columns:1.6fr .7fr auto;
+  gap:4vw;
+  align-items:end;
+  min-height:58vh;
+}
+
+.story-close > p{
+  color:#aaa;
+  line-height:1.8;
+  max-width:430px;
+  margin:0;
+}
+
+.story-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:2.5rem;
+  padding:1.15rem 0;
+  border-bottom:1px solid #fff;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.66rem;
+  white-space:nowrap;
+}
+
+.story-cta span{
+  font-size:1.1rem;
+}
+
+.story-footer{
+  background:#050505;
+}
+
+@media(max-width:980px){
+  .story-origin{
+    grid-template-columns:1fr 4fr;
+  }
+
+  .story-note{
+    grid-column:2;
+    max-width:420px;
+  }
+
+  .story-process{
+    grid-template-columns:1fr;
+  }
+
+  .story-process-mark{
+    margin-bottom:-2rem;
+  }
+
+  .story-close{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .story-close .story-cta{
+    grid-column:1 / -1;
+    justify-self:start;
+  }
+}
+
+@media(max-width:720px){
+  .story-hero{
+    min-height:780px;
+  }
+
+  .story-hero-image{
+    background-position:58% center;
+  }
+
+  .story-hero-copy{
+    width:auto;
+    padding:0 1.3rem 4.5rem;
+  }
+
+  .story-hero h1{
+    font-size:clamp(4.1rem,19vw,6rem);
+  }
+
+  .story-lede{
+    font-size:.82rem;
+    line-height:1.7;
+  }
+
+  .story-hero-index{
+    display:none;
+  }
+
+  .story-origin,
+  .story-beliefs,
+  .story-process,
+  .story-close{
+    padding:5rem 1.25rem;
+  }
+
+  .story-origin{
+    grid-template-columns:1fr;
+    gap:2.4rem;
+  }
+
+  .story-note{
+    grid-column:auto;
+  }
+
+  .story-origin-copy h2,
+  .story-process-copy h2,
+  .story-close h2{
+    font-size:clamp(3.4rem,15vw,5.2rem);
+  }
+
+  .story-statement{
+    min-height:620px;
+  }
+
+  .story-statement-copy{
+    margin-left:1.25rem;
+    width:calc(100vw - 2.5rem);
+  }
+
+  .story-statement blockquote{
+    font-size:clamp(3.6rem,15vw,5.7rem);
+  }
+
+  .story-belief-grid{
+    grid-template-columns:1fr;
+  }
+
+  .story-belief-grid article{
+    min-height:290px;
+    padding:1.6rem;
+  }
+
+  .story-belief-grid article > span{
+    margin-bottom:3.2rem;
+  }
+
+  .story-process{
+    min-height:auto;
+  }
+
+  .story-process-mark{
+    font-size:45vw;
+    margin-left:-.05em;
+  }
+
+  .story-close{
+    grid-template-columns:1fr;
+    align-items:start;
+    min-height:auto;
+  }
+
+  .story-close .story-cta{
+    grid-column:auto;
+  }
+
+  .story-page .site-footer{
+    grid-template-columns:1fr;
+    gap:1rem;
+    padding:2rem 1.25rem;
+  }
+}
+
+@media print{
+  .story-page,
+  .story-origin,
+  .story-beliefs,
+  .story-process,
+  .story-close{
+    background:#fff !important;
+    color:#111 !important;
+  }
+
+  .story-hero,
+  .story-statement{
+    min-height:150mm !important;
+  }
+
+  .story-hero-copy *,
+  .story-statement-copy *{
+    color:#fff !important;
+  }
+
+  .story-belief-grid h3,
+  .story-origin h2,
+  .story-process h2,
+  .story-close h2{
+    color:#111 !important;
+  }
+}
