@@ -571,11 +571,6 @@ a.social-icon:hover {
   letter-spacing:.24em;
   font-size:.56rem;
 }
-
-.contact-modal-aside p{
-  display:none;
-}
-
 .contact-modal-main{
   padding:4.7rem clamp(1.6rem,4vw,4.2rem) 3.4rem;
 }
@@ -693,13 +688,7 @@ body.contact-modal-open{
     border-bottom:1px solid rgba(255,255,255,.12);
     background-position:center 38%;
   }
-
-  .contact-modal-aside p{
-    max-width:8ch;
-    font-size:2.7rem;
-  }
-
-  .contact-modal-main{
+.contact-modal-main{
     padding:2.4rem 1.25rem 1.8rem;
   }
 
