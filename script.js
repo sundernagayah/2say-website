@@ -171,3 +171,72 @@ window.addEventListener('beforeprint', () => {
     el.classList.add('is-visible');
   });
 });
+
+
+// Shared contact modal.
+const contactModal = document.querySelector('#contact-modal');
+const contactModalClose = document.querySelector('#contact-modal-close');
+const contactModalForm = document.querySelector('#contact-modal-form');
+const contactModalTriggers = document.querySelectorAll('.contact-modal-trigger');
+let lastContactTrigger = null;
+
+function openContactModal(trigger) {
+  if (!contactModal) return;
+  lastContactTrigger = trigger || null;
+  contactModal.classList.add('is-open');
+  contactModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('contact-modal-open');
+  window.setTimeout(() => {
+    contactModal.querySelector('input[name="name"]')?.focus();
+  }, 50);
+}
+
+function closeContactModal() {
+  if (!contactModal) return;
+  contactModal.classList.remove('is-open');
+  contactModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('contact-modal-open');
+  lastContactTrigger?.focus();
+}
+
+contactModalTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', (event) => {
+    event.preventDefault();
+    openContactModal(trigger);
+  });
+});
+
+contactModalClose?.addEventListener('click', closeContactModal);
+
+contactModal?.addEventListener('click', (event) => {
+  if (event.target === contactModal) closeContactModal();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && contactModal?.classList.contains('is-open')) {
+    closeContactModal();
+  }
+});
+
+contactModalForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const form = new FormData(contactModalForm);
+  const name = String(form.get('name') || '').trim();
+  const email = String(form.get('email') || '').trim();
+  const message = String(form.get('message') || '').trim();
+
+  if (!name || !email || !message) {
+    contactModalForm.reportValidity();
+    return;
+  }
+
+  const subject = encodeURIComponent('2Say Films enquiry — ' + name);
+  const body = encodeURIComponent(
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n\n' +
+    message
+  );
+
+  window.location.href = 'mailto:hello@2sayfilms.com?subject=' + subject + '&body=' + body;
+});
