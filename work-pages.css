@@ -876,3 +876,13 @@ body.project-video-open{
   background-repeat:no-repeat;
   background-color:#0a0a0a;
 }
+
+
+.work-detail-page .corporate-bhumi-thumbnail{
+  display:block;
+  background-image:url("https://media.2sayfilms.com/BHUMI%20ASSET.png");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color:#0a0a0a;
+}
