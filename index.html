@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261006-contact-modal1" />
   <link rel="stylesheet" href="hero-image.css?v=20261005-mobilehero2" />
   <link rel="stylesheet" href="portfolio.css?v=20261006-dance-bts-rotate90" />
   <link rel="stylesheet" href="print.css?v=20261006-print1" media="print" />
@@ -22,7 +22,7 @@
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="contact-modal-trigger">Contact</a>
     </nav>
     <div class="header-tagline">Chasing Shadows. Breaking Light. <span class="line"></span></div>
   </header>
@@ -144,7 +144,7 @@
       <div class="contact-left">
         <p class="eyebrow">Get in touch</p>
         <h2>Let’s make<br/>something together.</h2>
-        <a class="outline-btn" href="mailto:hello@2sayfilms.com">Contact Us</a>
+        <a class="outline-btn contact-modal-trigger" href="mailto:hello@2sayfilms.com">Contact Us</a>
       </div>
       <div class="contact-right">
         <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
@@ -163,6 +163,38 @@
       </div>
     </section>
   </main>
+  <div class="contact-modal" id="contact-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="contact-modal-panel">
+      <button class="contact-modal-close" id="contact-modal-close" type="button" aria-label="Close contact form">×</button>
+      <div class="contact-modal-aside">
+        <span class="contact-modal-index">2SAY / CONTACT</span>
+        <p>Chasing Shadows.<br>Breaking Light.</p>
+      </div>
+      <div class="contact-modal-main">
+        <p class="contact-modal-kicker">Start a conversation</p>
+        <h2 id="contact-modal-title">Tell us what<br>you’re making.</h2>
+        <form class="contact-modal-form" id="contact-modal-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="contact-modal-message">
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <div class="contact-modal-actions">
+            <button class="contact-modal-submit" type="submit">Send enquiry <span>→</span></button>
+            <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 
   <footer class="site-footer">
     <div class="brand footer-brand">2SAY</div>
@@ -189,6 +221,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20261005-mobilehero2"></script>
+  <script src="script.js?v=20261006-contact-modal1"></script>
 </body>
 </html>
