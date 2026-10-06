@@ -7,8 +7,9 @@
   <meta name="description" content="The story and philosophy behind 2Say Films, a Singapore-based film production company." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://media.2sayfilms.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261006-contact-no-overlay" />
+  <link rel="stylesheet" href="styles.css?v=20261006-polish-pass1" />
   <link rel="stylesheet" href="story.css?v=20261006-coastal-overlay20" />
   <link rel="stylesheet" href="print.css?v=20261006-print1" media="print" />
 </head>
@@ -23,7 +24,21 @@
       <a href="index.html#contact" class="contact-modal-trigger">Contact</a>
     </nav>
     <div class="header-tagline">Chasing Shadows. Breaking Light. <span class="line"></span></div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="mobile-menu-toggle-label">Menu</span><span class="mobile-menu-toggle-mark" aria-hidden="true">+</span></button>
   </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Mobile primary">
+      <a href="index.html#top"><span>01</span><strong>Home</strong></a>
+      <a href="index.html#work"><span>02</span><strong>Work</strong></a>
+      <a href="our-story.html"><span>03</span><strong>About</strong></a>
+      <a href="index.html#services"><span>04</span><strong>Services</strong></a>
+      <a href="index.html#contact" class="contact-modal-trigger"><span>05</span><strong>Contact</strong></a>
+    </nav>
+    <div class="mobile-menu-meta">
+      <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
+      <span>Singapore</span>
+    </div>
+  </div>
 
   <main>
     <section class="story-hero">
@@ -101,7 +116,10 @@
       <div class="contact-modal-main">
         <p class="contact-modal-kicker">Start a conversation</p>
         <h2 id="contact-modal-title">Tell us what<br>you’re making.</h2>
-        <form class="contact-modal-form" id="contact-modal-form">
+        <form class="contact-modal-form" id="contact-modal-form" action="https://formsubmit.co/hello@2sayfilms.com" method="POST">
+          <input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New 2Say Films website enquiry" />
+          <input type="hidden" name="_template" value="table" />
           <label>
             <span>Name</span>
             <input type="text" name="name" autocomplete="name" required />
@@ -118,6 +136,7 @@
             <button class="contact-modal-submit" type="submit">Send enquiry <span>→</span></button>
             <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
           </div>
+          <p class="contact-form-status" id="contact-form-status" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -129,10 +148,11 @@
     <div>© 2026 2Say. All rights reserved.</div>
     <div class="footer-links">
       <a href="https://www.instagram.com/2sayfilms/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.youtube.com/@2sayfilms" target="_blank" rel="noopener noreferrer">YouTube</a>
       <a href="https://vimeo.com/2sayfilms" target="_blank" rel="noopener noreferrer">Vimeo</a>
       <span class="line"></span>
     </div>
   </footer>
-  <script src="script.js?v=20261006-contact-modal1"></script>
+  <script src="script.js?v=20261006-polish-pass1"></script>
 </body>
 </html>
