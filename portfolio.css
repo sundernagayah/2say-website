@@ -198,11 +198,12 @@ body{
 }
 
 .about-image{
-  background:
-    linear-gradient(90deg,transparent 55%,rgba(0,0,0,.7)),
-    url("https://media.2sayfilms.com/short-06.webp") center / cover,
-    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
-  filter:saturate(.78) contrast(1.05) brightness(.72);
+  background-image:url("https://media.2sayfilms.com/2SAY%20LOGO.png");
+  background-position:center center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-color:#0a0a09;
+  filter:none;
 }
 
 .contact-banner{
