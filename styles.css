@@ -555,9 +555,7 @@ a.social-icon:hover {
   flex-direction:column;
   justify-content:space-between;
   border-right:1px solid rgba(255,255,255,.12);
-  background:
-    linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.12)),
-    url("https://media.2sayfilms.com/CONTACT.png") center / cover no-repeat;
+  background:url("https://media.2sayfilms.com/CONTACT.png") center / cover no-repeat;
   filter:grayscale(1);
 }
 
