@@ -147,10 +147,10 @@ body{
 .is-coming .category-meta{opacity:.62;}
 .is-coming{cursor:default;}
 
-.feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.feature-media{background-image:url("https://media.2sayfilms.com/feature-coming.webp");background-color:#111;}
 .short-media{background-image:url("https://media.2sayfilms.com/NARRATIVE%20THUMBNAIL.png");background-color:#111;}
-.music-media{background-image:url("https://media.2sayfilms.com/MUSIC%20VIDEO%20THUMBNAIL.png"),url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-media{background-image:url("https://media.2sayfilms.com/CORPORATE%20TITLE.png?v=20261005-1439"),url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-media{background-image:url("https://media.2sayfilms.com/MUSIC%20VIDEO%20THUMBNAIL.png");background-color:#111;}
+.corp-media{background-image:url("https://media.2sayfilms.com/CORPORATE%20TITLE.png?v=20261005-1439");background-color:#111;}
 
 .visual-interlude{
   position:relative;
@@ -175,11 +175,7 @@ body{
   top:50%;
   width:min(42vw,560px);
   height:100vw;
-  background-image:
-    url("https://media.2sayfilms.com/DANCE%20BTS.png"),
-    url("https://media.2sayfilms.com/DANCE%20BTS.jpg"),
-    url("https://media.2sayfilms.com/DANCE%20BTS.jpeg"),
-    url("https://media.2sayfilms.com/DANCE%20BTS.webp");
+  background-image:url("https://media.2sayfilms.com/DANCE%20BTS.png");
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -230,10 +226,7 @@ body{
 }
 
 .contact-banner{
-  background:
-    linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),
-    url("https://media.2sayfilms.com/corp-03.webp") center / cover,
-    url('vlcsnap-2026-09-10-22h52m08s626.png') center / cover;
+  background:\n    linear-gradient(90deg,rgba(7,12,17,.92),rgba(7,12,17,.5)),\n    url("https://media.2sayfilms.com/corp-03.webp") center / cover;
 }
 
 /* Portfolio pages */
@@ -309,8 +302,8 @@ body{
   pointer-events:none;
 }
 
-.portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.portfolio-lead.short{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.portfolio-lead.music{background-image:url("https://media.2sayfilms.com/music-01.webp");}
 .portfolio-lead.corporate{background-image:url("assets/coming-soon-corporates.webp");}
 
 .portfolio-rule{
@@ -374,24 +367,24 @@ body{
   text-transform:uppercase;
 }
 
-.short-01{background-image:url("https://media.2sayfilms.com/short-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-02{background-image:url("https://media.2sayfilms.com/short-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-03{background-image:url("https://media.2sayfilms.com/short-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-04{background-image:url("https://media.2sayfilms.com/short-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-05{background-image:url("https://media.2sayfilms.com/short-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.short-06{background-image:url("https://media.2sayfilms.com/short-06.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.short-01{background-image:url("https://media.2sayfilms.com/short-01.webp");}
+.short-02{background-image:url("https://media.2sayfilms.com/short-02.webp");}
+.short-03{background-image:url("https://media.2sayfilms.com/short-03.webp");}
+.short-04{background-image:url("https://media.2sayfilms.com/short-04.webp");}
+.short-05{background-image:url("https://media.2sayfilms.com/short-05.webp");}
+.short-06{background-image:url("https://media.2sayfilms.com/short-06.webp");}
 
-.music-01{background-image:url("https://media.2sayfilms.com/music-01.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.music-02{background-image:url("https://media.2sayfilms.com/music-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.music-03{background-image:url("https://media.2sayfilms.com/music-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.music-04{background-image:url("https://media.2sayfilms.com/music-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.music-05{background-image:url("https://media.2sayfilms.com/music-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.music-01{background-image:url("https://media.2sayfilms.com/music-01.webp");}
+.music-02{background-image:url("https://media.2sayfilms.com/music-02.webp");}
+.music-03{background-image:url("https://media.2sayfilms.com/music-03.webp");}
+.music-04{background-image:url("https://media.2sayfilms.com/music-04.webp");}
+.music-05{background-image:url("https://media.2sayfilms.com/music-05.webp");}
 
-.corp-01{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
-.corp-05{background-image:url("https://media.2sayfilms.com/corp-05.webp"),url('vlcsnap-2026-09-10-22h52m08s626.png');}
+.corp-01{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
+.corp-02{background-image:url("https://media.2sayfilms.com/corp-02.webp");}
+.corp-03{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
+.corp-04{background-image:url("https://media.2sayfilms.com/corp-04.webp");}
+.corp-05{background-image:url("https://media.2sayfilms.com/corp-05.webp");}
 
 .portfolio-break{
   margin:0 4vw 9rem;
@@ -1243,4 +1236,15 @@ body::before{
     margin-top:1.6rem;
     max-width:34rem;
   }
+}
+
+
+/* Lightweight rendering for below-fold sections */
+.work-index,
+.visual-interlude,
+.about-split,
+.services-section,
+.contact-banner{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 720px;
 }
