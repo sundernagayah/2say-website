@@ -7,10 +7,11 @@
   <meta name="description" content="2Say Films is a Singapore-based film production company creating cinematic work across film, commercial and original content." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://media.2sayfilms.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261006-contact-no-overlay" />
+  <link rel="stylesheet" href="styles.css?v=20261006-polish-pass1" />
   <link rel="stylesheet" href="hero-image.css?v=20261006-mobile-static-hero" />
-  <link rel="stylesheet" href="portfolio.css?v=20261006-work-intro-compact" />
+  <link rel="stylesheet" href="portfolio.css?v=20261006-image-lean1" />
   <link rel="stylesheet" href="print.css?v=20261006-print1" media="print" />
 </head>
 <body>
@@ -25,14 +26,28 @@
       <a href="#contact" class="contact-modal-trigger">Contact</a>
     </nav>
     <div class="header-tagline">Chasing Shadows. Breaking Light. <span class="line"></span></div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="mobile-menu-toggle-label">Menu</span><span class="mobile-menu-toggle-mark" aria-hidden="true">+</span></button>
   </header>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Mobile primary">
+      <a href="#top"><span>01</span><strong>Home</strong></a>
+      <a href="#work"><span>02</span><strong>Work</strong></a>
+      <a href="our-story.html"><span>03</span><strong>About</strong></a>
+      <a href="#services"><span>04</span><strong>Services</strong></a>
+      <a href="#contact" class="contact-modal-trigger"><span>05</span><strong>Contact</strong></a>
+    </nav>
+    <div class="mobile-menu-meta">
+      <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
+      <span>Singapore</span>
+    </div>
+  </div>
 
   <main id="top">
     <section class="hero">
       <div class="hero-video" aria-hidden="true">
         <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="vlcsnap-2026-09-10-22h52m08s626.png" disablepictureinpicture>
-          <source src="https://media.2sayfilms.com/hero-bg.mp4" type="video/mp4" />
-          <source src="https://media.2sayfilms.com/hero-bg.webm" type="video/webm" />
+          <source src="https://media.2sayfilms.com/hero-bg.mp4" type="video/mp4" media="(min-width: 721px)" />
+          <source src="https://media.2sayfilms.com/hero-bg.webm" type="video/webm" media="(min-width: 721px)" />
         </video>
       </div>
       <div class="hero-overlay"></div>
@@ -56,7 +71,7 @@
     <section class="section work-section work-index" id="work">
       <div class="section-heading-row">
         <div>
-          <p class="eyebrow">Selected work</p>
+          <p class="eyebrow">01 / Selected work</p>
           <h2>Different forms.<br>One point of view.</h2>
         </div>
         <p class="work-index-intro">Narrative, performance and commissioned work — approached with the same obsession for character, atmosphere and images that stay with you.</p>
@@ -112,7 +127,7 @@
     <section class="about-split" id="about">
       <div class="about-image"></div>
       <div class="about-copy">
-        <p class="eyebrow">About 2Say</p>
+        <p class="eyebrow">02 / About 2Say</p>
         <h2>A different kind of<br/>film company.</h2>
         <p>2Say is a film production company creating cinematic work across film, commercial, and original content. We collaborate with brands, agencies, and fellow storytellers to bring meaningful ideas to life — with a distinct voice and a global outlook.</p>
         <p>Based in Singapore, working wherever stories take us.</p>
@@ -123,7 +138,7 @@
     <section class="section services-section" id="services">
       <div class="section-heading-row">
         <div>
-          <p class="eyebrow">What we do</p>
+          <p class="eyebrow">03 / What we do</p>
           <h2>From idea to screen.</h2>
         </div>
         <a class="text-link" href="#contact">Our services <span>→</span></a>
@@ -142,7 +157,7 @@
     <section class="contact-banner" id="contact">
       <div class="contact-overlay"></div>
       <div class="contact-left">
-        <p class="eyebrow">Get in touch</p>
+        <p class="eyebrow">04 / Get in touch</p>
         <h2>Let’s make<br/>something together.</h2>
         <a class="outline-btn contact-modal-trigger" href="mailto:hello@2sayfilms.com">Contact Us</a>
       </div>
@@ -172,7 +187,10 @@
       <div class="contact-modal-main">
         <p class="contact-modal-kicker">Start a conversation</p>
         <h2 id="contact-modal-title">Tell us what<br>you’re making.</h2>
-        <form class="contact-modal-form" id="contact-modal-form">
+        <form class="contact-modal-form" id="contact-modal-form" action="https://formsubmit.co/hello@2sayfilms.com" method="POST">
+          <input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="hidden" name="_subject" value="New 2Say Films website enquiry" />
+          <input type="hidden" name="_template" value="table" />
           <label>
             <span>Name</span>
             <input type="text" name="name" autocomplete="name" required />
@@ -189,6 +207,7 @@
             <button class="contact-modal-submit" type="submit">Send enquiry <span>→</span></button>
             <a href="mailto:hello@2sayfilms.com">hello@2sayfilms.com</a>
           </div>
+          <p class="contact-form-status" id="contact-form-status" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -199,9 +218,9 @@
     <div class="brand footer-brand">2SAY</div>
     <div>© 2026 2Say. All rights reserved.</div>
     <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Credits</a>
+      <a href="https://www.instagram.com/2sayfilms/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.youtube.com/@2sayfilms" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://vimeo.com/2sayfilms" target="_blank" rel="noopener noreferrer">Vimeo</a>
       <span class="line"></span>
     </div>
   </footer>
@@ -220,6 +239,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=20261006-contact-modal1"></script>
+  <script src="script.js?v=20261006-polish-pass1"></script>
 </body>
 </html>
