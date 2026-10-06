@@ -423,8 +423,8 @@
 .work-detail-page .corp-01-img,
 .work-detail-page .corp-02-img{background-image:url("assets/coming-soon-corporates.webp");}
 .work-detail-page .corp-03-img{background-image:url("https://media.2sayfilms.com/corp-03.webp");}
-.work-detail-page .corp-04-img{background-image:url("https://media.2sayfilms.com/corp-04.webp");}
-.work-detail-page .corp-05-img{background-image:url("https://media.2sayfilms.com/corp-05.webp");}
+.work-detail-page .corp-04-img{background-image:url("assets/coming-soon-corporates.webp");}
+.work-detail-page .corp-05-img{background-image:url("assets/coming-soon-corporates.webp");}
 
 @media(max-width:980px){
   .work-detail-page .work-hero{
