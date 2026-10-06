@@ -496,3 +496,241 @@ a.social-icon:hover {
   }
   .footer-links { justify-self: start; }
 }
+
+
+/* Shared cinematic contact modal */
+.contact-modal{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  display:grid;
+  place-items:center;
+  padding:1.25rem;
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(14px);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .25s ease,visibility .25s ease;
+}
+
+.contact-modal.is-open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.contact-modal-panel{
+  position:relative;
+  width:min(1040px,calc(100vw - 2.5rem));
+  max-height:calc(100vh - 2.5rem);
+  overflow:auto;
+  display:grid;
+  grid-template-columns:minmax(220px,.72fr) minmax(0,1.55fr);
+  background:#090909;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 40px 120px rgba(0,0,0,.62);
+}
+
+.contact-modal-close{
+  position:absolute;
+  top:1rem;
+  right:1.1rem;
+  z-index:3;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+  background:rgba(0,0,0,.35);
+  color:#f0ede6;
+  font-size:1.65rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.contact-modal-aside{
+  min-height:620px;
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-right:1px solid rgba(255,255,255,.12);
+  background:
+    linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.12)),
+    url("https://media.2sayfilms.com/DANCE%20BTS.png") center / cover no-repeat;
+  filter:grayscale(1);
+}
+
+.contact-modal-aside > *{
+  filter:none;
+}
+
+.contact-modal-index,
+.contact-modal-kicker{
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:.56rem;
+}
+
+.contact-modal-aside p{
+  margin:0;
+  font-family:var(--serif);
+  font-size:clamp(2.3rem,4vw,4.5rem);
+  line-height:.88;
+  letter-spacing:-.035em;
+  color:#f2eee7;
+}
+
+.contact-modal-main{
+  padding:4.7rem clamp(1.6rem,4vw,4.2rem) 3.4rem;
+}
+
+.contact-modal-kicker{
+  margin:0 0 1rem;
+  color:#9f9a92;
+}
+
+.contact-modal-main h2{
+  margin:0 0 3rem;
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(3.6rem,6.7vw,7rem);
+  line-height:.82;
+  letter-spacing:-.045em;
+  color:#f2eee7;
+}
+
+.contact-modal-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem 1.8rem;
+}
+
+.contact-modal-form label{
+  display:block;
+}
+
+.contact-modal-form label > span{
+  display:block;
+  margin-bottom:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-size:.55rem;
+  color:#918c84;
+}
+
+.contact-modal-form input,
+.contact-modal-form textarea{
+  width:100%;
+  box-sizing:border-box;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.22);
+  border-radius:0;
+  padding:.55rem 0 .9rem;
+  background:transparent;
+  color:#f2eee7;
+  font:300 .9rem/1.5 var(--sans);
+  outline:none;
+}
+
+.contact-modal-form textarea{
+  resize:vertical;
+  min-height:110px;
+}
+
+.contact-modal-form input:focus,
+.contact-modal-form textarea:focus{
+  border-bottom-color:#f2eee7;
+}
+
+.contact-modal-message,
+.contact-modal-actions{
+  grid-column:1 / -1;
+}
+
+.contact-modal-actions{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.5rem;
+  padding-top:.8rem;
+}
+
+.contact-modal-submit{
+  display:inline-flex;
+  align-items:center;
+  gap:2.6rem;
+  padding:1rem 0;
+  border:0;
+  border-bottom:1px solid #f2eee7;
+  background:transparent;
+  color:#f2eee7;
+  font:500 .62rem/1 var(--sans);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.contact-modal-actions > a{
+  color:#aaa49b;
+  font-size:.72rem;
+}
+
+body.contact-modal-open{
+  overflow:hidden;
+}
+
+@media(max-width:720px){
+  .contact-modal{
+    padding:.6rem;
+  }
+
+  .contact-modal-panel{
+    width:calc(100vw - 1.2rem);
+    max-height:calc(100vh - 1.2rem);
+    grid-template-columns:1fr;
+  }
+
+  .contact-modal-aside{
+    min-height:180px;
+    padding:1.25rem;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    background-position:center 38%;
+  }
+
+  .contact-modal-aside p{
+    max-width:8ch;
+    font-size:2.7rem;
+  }
+
+  .contact-modal-main{
+    padding:2.4rem 1.25rem 1.8rem;
+  }
+
+  .contact-modal-main h2{
+    margin-bottom:2rem;
+    font-size:3.7rem;
+  }
+
+  .contact-modal-form{
+    grid-template-columns:1fr;
+    gap:1.15rem;
+  }
+
+  .contact-modal-message,
+  .contact-modal-actions{
+    grid-column:auto;
+  }
+
+  .contact-modal-actions{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+@media print{
+  .contact-modal{
+    display:none !important;
+  }
+}
