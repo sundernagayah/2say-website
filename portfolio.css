@@ -163,18 +163,36 @@ body{
 
 .visual-interlude-image{
   position:absolute;
-  inset:-14%;
+  inset:0;
+  overflow:hidden;
+  filter:contrast(1.08) brightness(.72);
+}
+
+.visual-interlude-image::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:min(42vw,560px);
+  height:100vw;
   background-image:
-    linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08) 45%,rgba(0,0,0,.5)),
     url("https://media.2sayfilms.com/DANCE%20BTS.png"),
     url("https://media.2sayfilms.com/DANCE%20BTS.jpg"),
     url("https://media.2sayfilms.com/DANCE%20BTS.jpeg"),
     url("https://media.2sayfilms.com/DANCE%20BTS.webp");
-  background-position:center,center,center,center,center;
-  background-size:cover,cover,cover,cover,cover;
+  background-position:center;
+  background-size:cover;
   background-repeat:no-repeat;
-  filter:contrast(1.08) brightness(.72);
-  transform:scale(1.03);
+  transform:translate(-50%,-50%) rotate(90deg);
+  transform-origin:center;
+}
+
+.visual-interlude-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.68),rgba(0,0,0,.08) 45%,rgba(0,0,0,.5));
+  pointer-events:none;
 }
 
 .visual-interlude-copy{
@@ -1145,5 +1163,14 @@ body::before{
   .work-index-grid .short-media{
     background-size:cover;
     background-position:center center;
+  }
+}
+
+
+/* Rotated Dance BTS mobile fill */
+@media(max-width:720px){
+  .visual-interlude-image::before{
+    width:max(60vh,430px);
+    height:100vw;
   }
 }
