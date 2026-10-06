@@ -218,25 +218,106 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-contactModalForm?.addEventListener('submit', (event) => {
+
+
+/* Mobile editorial menu */
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mobileMenu = document.querySelector('#mobile-menu');
+const mobileMenuLabel = mobileMenuToggle?.querySelector('.mobile-menu-toggle-label');
+
+function setMobileMenu(open) {
+  if (!mobileMenu || !mobileMenuToggle) return;
+  mobileMenu.classList.toggle('is-open', open);
+  mobileMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+  mobileMenuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  mobileMenuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  if (mobileMenuLabel) mobileMenuLabel.textContent = open ? 'Close' : 'Menu';
+  document.body.classList.toggle('mobile-menu-open', open);
+}
+
+mobileMenuToggle?.addEventListener('click', () => {
+  setMobileMenu(!mobileMenu?.classList.contains('is-open'));
+});
+
+mobileMenu?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => setMobileMenu(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mobileMenu?.classList.contains('is-open')) {
+    setMobileMenu(false);
+    mobileMenuToggle?.focus();
+  }
+});
+
+
+/* Contact form — submit in place and email hello@2sayfilms.com via FormSubmit. */
+contactModalForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
+  if (!contactModalForm.reportValidity()) return;
+
   const form = new FormData(contactModalForm);
+  const honey = String(form.get('_honey') || '').trim();
+  if (honey) return;
+
   const name = String(form.get('name') || '').trim();
   const email = String(form.get('email') || '').trim();
   const message = String(form.get('message') || '').trim();
+  const submitButton = contactModalForm.querySelector('.contact-modal-submit');
+  const submitLabel = submitButton?.innerHTML;
+  const status = contactModalForm.querySelector('.contact-form-status');
 
-  if (!name || !email || !message) {
-    contactModalForm.reportValidity();
-    return;
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Sending…';
+  }
+  if (status) {
+    status.textContent = '';
+    status.className = 'contact-form-status';
   }
 
-  const subject = encodeURIComponent('2Say Films enquiry — ' + name);
-  const body = encodeURIComponent(
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n\n' +
-    message
-  );
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/hello@2sayfilms.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+        _subject: 'New 2Say Films website enquiry — ' + name,
+        _template: 'table'
+      })
+    });
 
-  window.location.href = 'mailto:hello@2sayfilms.com?subject=' + subject + '&body=' + body;
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.success === false || data.success === 'false') {
+      throw new Error(data.message || 'Unable to send enquiry');
+    }
+
+    contactModalForm.reset();
+    if (status) {
+      status.textContent = 'Thanks — your enquiry has been submitted.';
+      status.classList.add('is-success');
+    }
+    if (submitButton) submitButton.innerHTML = 'Sent ✓';
+  } catch (error) {
+    if (status) {
+      status.textContent = 'Couldn’t send right now. You can still email hello@2sayfilms.com directly.';
+      status.classList.add('is-error');
+    }
+    if (submitButton) submitButton.innerHTML = submitLabel || 'Send enquiry <span>→</span>';
+  } finally {
+    if (submitButton) {
+      window.setTimeout(() => {
+        submitButton.disabled = false;
+        if (submitButton.innerHTML === 'Sent ✓') {
+          submitButton.innerHTML = submitLabel || 'Send enquiry <span>→</span>';
+        }
+      }, 3500);
+    }
+  }
 });
