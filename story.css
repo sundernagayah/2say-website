@@ -487,25 +487,46 @@
 }
 
 
-/* REMEMBER background for closing Our Story section */
+/* Our Story closing image — rebuilt cleanly with COASTAL from R2 */
 @media screen {
   .story-page .story-close{
     position:relative;
     isolation:isolate;
     overflow:hidden;
-    background-image:url("https://raw.githubusercontent.com/sundernagayah/2say-website/main/assets/remember-generated.webp") !important;
-    background-position:center center !important;
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-    background-color:#050505 !important;
+    background:#050505;
   }
 
   .story-page .story-close::before{
-    display:none !important;
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    display:block !important;
+    background-image:url("https://media.2sayfilms.com/COASTAL.png");
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    filter:grayscale(1);
+    opacity:1;
+    pointer-events:none;
+  }
+
+  .story-page .story-close::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(
+      90deg,
+      rgba(0,0,0,.34) 0%,
+      rgba(0,0,0,.12) 48%,
+      rgba(0,0,0,.28) 100%
+    );
+    pointer-events:none;
   }
 
   .story-page .story-close > *{
     position:relative;
-    z-index:1;
+    z-index:2;
   }
 }
