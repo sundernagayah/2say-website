@@ -494,17 +494,12 @@
     isolation:isolate;
     overflow:hidden;
     background:
-      linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.48) 48%,rgba(0,0,0,.64) 100%),
-      url("assets/remember-generated.webp") center center / cover no-repeat;
+      linear-gradient(90deg,rgba(0,0,0,.16) 0%,rgba(0,0,0,.06) 48%,rgba(0,0,0,.18) 100%),
+      url("assets/remember-generated.webp") center center / cover no-repeat !important;
   }
 
   .story-page .story-close::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    z-index:-1;
-    background:linear-gradient(to top,rgba(0,0,0,.34),transparent 42%,rgba(0,0,0,.16));
-    pointer-events:none;
+    display:none !important;
   }
 
   .story-page .story-close > *{
