@@ -493,9 +493,11 @@
     position:relative;
     isolation:isolate;
     overflow:hidden;
-    background:
-      linear-gradient(90deg,rgba(0,0,0,.16) 0%,rgba(0,0,0,.06) 48%,rgba(0,0,0,.18) 100%),
-      url("assets/remember-generated.webp?v=20261006-valid2") center center / cover no-repeat !important;
+    background-image:url("https://raw.githubusercontent.com/sundernagayah/2say-website/main/assets/remember-generated.webp") !important;
+    background-position:center center !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+    background-color:#050505 !important;
   }
 
   .story-page .story-close::before{
