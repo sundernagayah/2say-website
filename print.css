@@ -1,0 +1,180 @@
+/* Print / Save-as-PDF support for 2Say Films */
+@page{
+  size:auto;
+  margin:12mm;
+}
+
+@media print{
+  *,
+  *::before,
+  *::after{
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+    animation:none !important;
+    transition:none !important;
+  }
+
+  html,
+  body{
+    width:auto !important;
+    height:auto !important;
+    min-height:0 !important;
+    overflow:visible !important;
+    background:#ffffff !important;
+    color:#111111 !important;
+  }
+
+  /* Reveal-on-scroll elements can otherwise remain invisible in print preview. */
+  .motion-ready .reveal-item,
+  .reveal-item,
+  .reveal-item.is-visible{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+  }
+
+  /* Make copy readable even when the browser chooses not to print dark backgrounds. */
+  h1,h2,h3,h4,h5,h6,
+  p,span,small,strong,
+  a,button,
+  .eyebrow,
+  .hero-sub,
+  .work-card-meta,
+  .project-credits,
+  .work-intro,
+  .work-locale,
+  .work-card-link,
+  .collection-head,
+  .about-copy,
+  .services-section,
+  .contact-banner,
+  .site-footer{
+    color:#111111 !important;
+    text-shadow:none !important;
+  }
+
+  .site-header{
+    position:static !important;
+    inset:auto !important;
+    background:#ffffff !important;
+    color:#111111 !important;
+    border-bottom:1px solid #d8d8d8 !important;
+  }
+
+  .site-header .brand,
+  .site-header a,
+  .header-tagline,
+  .main-nav a,
+  .site-footer a{
+    color:#111111 !important;
+  }
+
+  .hero,
+  .section,
+  .work-collection,
+  .work-cta,
+  .about-split,
+  .services-section,
+  .contact-banner,
+  .site-footer,
+  .portfolio-main{
+    background:#ffffff !important;
+  }
+
+  /* Keep media visible in PDF wherever the browser supports printed backgrounds. */
+  .hero-video,
+  .work-category-media,
+  .work-card-image,
+  .about-image,
+  .work-hero::before{
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+  }
+
+  .hero{
+    height:auto !important;
+    min-height:190mm !important;
+    overflow:hidden !important;
+    break-after:page;
+    page-break-after:always;
+  }
+
+  .hero-video{
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+  }
+
+  .hero-video video{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+
+  .hero-copy{
+    position:relative !important;
+    z-index:5 !important;
+  }
+
+  .hero-overlay{
+    display:none !important;
+  }
+
+  .showreel-modal,
+  .project-video-modal{
+    display:none !important;
+  }
+
+  .work-category,
+  .work-card,
+  .about-split,
+  .services-section,
+  .contact-banner,
+  .portfolio-project,
+  .portfolio-break,
+  .next-work{
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+
+  .work-card,
+  .work-category{
+    box-shadow:none !important;
+  }
+
+  .work-card-image,
+  .work-category-media{
+    min-height:55mm !important;
+  }
+
+  .work-hero{
+    min-height:150mm !important;
+    height:auto !important;
+    overflow:hidden !important;
+  }
+
+  .work-hero::after{
+    opacity:.22 !important;
+  }
+
+  .work-hero-copy,
+  .work-hero-mantra{
+    position:relative !important;
+    z-index:2 !important;
+  }
+
+  .work-hero-copy *,
+  .work-hero-mantra *{
+    color:#ffffff !important;
+  }
+
+  .about-image{
+    min-height:85mm !important;
+  }
+
+  a,
+  button{
+    text-decoration:none !important;
+  }
+}
